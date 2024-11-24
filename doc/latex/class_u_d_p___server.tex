@@ -1,0 +1,80 @@
+\hypertarget{class_u_d_p___server}{}\doxysection{UDP\+\_\+\+Server Class Reference}
+\label{class_u_d_p___server}\index{UDP\_Server@{UDP\_Server}}
+
+
+classe of \mbox{\hyperlink{class_u_d_p___server}{UDP\+\_\+\+Server}}  
+
+
+
+
+{\ttfamily \#include $<$networking\+\_\+server.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_d_p___server_a7db0c9ef2a5362fa7b5882bc859f2254}{UDP\+\_\+\+Server}} (boost\+::asio\+::io\+\_\+context \&io\+\_\+context, short port)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_d_p___server_a39a272ae896910999528a5695c802ed7}{do\+\_\+receive}} ()
+\begin{DoxyCompactList}\small\item\em Receive data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_d_p___server_ad5b47464cb5c89a5491ffef4ef45dae5}{do\+\_\+send\+\_\+specific}} (udp\+::endpoint sender\+\_\+endpoint)
+\begin{DoxyCompactList}\small\item\em send specifiq data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+classe of \mbox{\hyperlink{class_u_d_p___server}{UDP\+\_\+\+Server}} 
+
+class handle udp connexion 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_d_p___server_a7db0c9ef2a5362fa7b5882bc859f2254}\label{class_u_d_p___server_a7db0c9ef2a5362fa7b5882bc859f2254}} 
+\index{UDP\_Server@{UDP\_Server}!UDP\_Server@{UDP\_Server}}
+\index{UDP\_Server@{UDP\_Server}!UDP\_Server@{UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{UDP\_Server()}{UDP\_Server()}}
+{\footnotesize\ttfamily UDP\+\_\+\+Server\+::\+UDP\+\_\+\+Server (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+context \&}]{io\+\_\+context,  }\item[{short}]{port }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructorr of class udp
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+\_\+context} & \+: io\+\_\+context see doc boost/asio \\
+\hline
+{\em port} & \+: port of connection \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_d_p___server_a39a272ae896910999528a5695c802ed7}\label{class_u_d_p___server_a39a272ae896910999528a5695c802ed7}} 
+\index{UDP\_Server@{UDP\_Server}!do\_receive@{do\_receive}}
+\index{do\_receive@{do\_receive}!UDP\_Server@{UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{do\_receive()}{do\_receive()}}
+{\footnotesize\ttfamily void UDP\+\_\+\+Server\+::do\+\_\+receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Receive data. 
+
+Receive data in udp format \mbox{\Hypertarget{class_u_d_p___server_ad5b47464cb5c89a5491ffef4ef45dae5}\label{class_u_d_p___server_ad5b47464cb5c89a5491ffef4ef45dae5}} 
+\index{UDP\_Server@{UDP\_Server}!do\_send\_specific@{do\_send\_specific}}
+\index{do\_send\_specific@{do\_send\_specific}!UDP\_Server@{UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{do\_send\_specific()}{do\_send\_specific()}}
+{\footnotesize\ttfamily void UDP\+\_\+\+Server\+::do\+\_\+send\+\_\+specific (\begin{DoxyParamCaption}\item[{udp\+::endpoint}]{sender\+\_\+endpoint }\end{DoxyParamCaption})}
+
+
+
+send specifiq data 
+
+Send specifiq data to server 
+\begin{DoxyParams}{Parameters}
+{\em sender\+\_\+endpoint} & \+: server endpoint check doc boost/asio \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/server/\mbox{\hyperlink{networking__server_8hpp}{networking\+\_\+server.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,136 @@
+\hypertarget{class_room__server}{}\doxysection{Room\+\_\+server Class Reference}
+\label{class_room__server}\index{Room\_server@{Room\_server}}
+
+
+classe of \mbox{\hyperlink{class_room__server}{Room\+\_\+server}}  
+
+
+
+
+{\ttfamily \#include $<$Room.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_room__server_aa48d886f70c6dc84e22f851bc46cd445}{Room\+\_\+server}} (std\+::string name, int max\+\_\+players)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room__server_aaf011bb8a63e64e4c22d4640bd3a3580}{$\sim$\+Room\+\_\+server}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room__server_a28ed6536596128f8ad4177187025906c}{Create\+\_\+room}} (udp\+::endpoint \+\_\+sender\+\_\+endpoint)
+\begin{DoxyCompactList}\small\item\em Creation of room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room__server_ab1e1f2fbfa296ad3ed7ece5ae653716f}{Add\+\_\+client}} (udp\+::endpoint \+\_\+sender\+\_\+endpoint)
+\begin{DoxyCompactList}\small\item\em Add client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room__server_a115dc7952e5484fc1094135fd71485aa}{Treating\+\_\+\+Game\+\_\+\+Loop}} (int type, int pos\+\_\+x, int pos\+\_\+y, int id)
+\begin{DoxyCompactList}\small\item\em thread game loop \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_room__server_a9cad3391278c4517d15894fa5916ff8b}\label{class_room__server_a9cad3391278c4517d15894fa5916ff8b}} 
+std\+::vector$<$ udp\+::endpoint $>$ {\bfseries clients\+\_\+in\+\_\+game}
+\item 
+\mbox{\Hypertarget{class_room__server_a77b7c8d24acf2071ac6e2b35f995b49b}\label{class_room__server_a77b7c8d24acf2071ac6e2b35f995b49b}} 
+std\+::string {\bfseries room\+\_\+name}
+\item 
+\mbox{\Hypertarget{class_room__server_abb23537d96c4170c026f09e9a4262cef}\label{class_room__server_abb23537d96c4170c026f09e9a4262cef}} 
+int16\+\_\+t {\bfseries max\+\_\+players}
+\item 
+\mbox{\Hypertarget{class_room__server_a74d6115fd1fce2b8e4fd503e3da31287}\label{class_room__server_a74d6115fd1fce2b8e4fd503e3da31287}} 
+\mbox{\hyperlink{class_server_internal_logic}{Server\+Internal\+Logic}} $\ast$ {\bfseries Game}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+classe of \mbox{\hyperlink{class_room__server}{Room\+\_\+server}} 
+
+class handle room for server side 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_room__server_aa48d886f70c6dc84e22f851bc46cd445}\label{class_room__server_aa48d886f70c6dc84e22f851bc46cd445}} 
+\index{Room\_server@{Room\_server}!Room\_server@{Room\_server}}
+\index{Room\_server@{Room\_server}!Room\_server@{Room\_server}}
+\doxysubsubsection{\texorpdfstring{Room\_server()}{Room\_server()}}
+{\footnotesize\ttfamily Room\+\_\+server\+::\+Room\+\_\+server (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{max\+\_\+players }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructorr of class \mbox{\hyperlink{class_room__server}{Room\+\_\+server}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \+: name of the room \\
+\hline
+{\em max\+\_\+players} & \+: max numbers of player in a room \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_room__server_aaf011bb8a63e64e4c22d4640bd3a3580}\label{class_room__server_aaf011bb8a63e64e4c22d4640bd3a3580}} 
+\index{Room\_server@{Room\_server}!````~Room\_server@{$\sim$Room\_server}}
+\index{````~Room\_server@{$\sim$Room\_server}!Room\_server@{Room\_server}}
+\doxysubsubsection{\texorpdfstring{$\sim$Room\_server()}{~Room\_server()}}
+{\footnotesize\ttfamily Room\+\_\+server\+::$\sim$\+Room\+\_\+server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Destructor of class Room\+\_\+\+Server 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_room__server_ab1e1f2fbfa296ad3ed7ece5ae653716f}\label{class_room__server_ab1e1f2fbfa296ad3ed7ece5ae653716f}} 
+\index{Room\_server@{Room\_server}!Add\_client@{Add\_client}}
+\index{Add\_client@{Add\_client}!Room\_server@{Room\_server}}
+\doxysubsubsection{\texorpdfstring{Add\_client()}{Add\_client()}}
+{\footnotesize\ttfamily void Room\+\_\+server\+::\+Add\+\_\+client (\begin{DoxyParamCaption}\item[{udp\+::endpoint}]{\+\_\+sender\+\_\+endpoint }\end{DoxyParamCaption})}
+
+
+
+Add client. 
+
+Add client to room
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sender\+\_\+endpoint} & \+: sender endpoint see doc boost/asio \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_room__server_a28ed6536596128f8ad4177187025906c}\label{class_room__server_a28ed6536596128f8ad4177187025906c}} 
+\index{Room\_server@{Room\_server}!Create\_room@{Create\_room}}
+\index{Create\_room@{Create\_room}!Room\_server@{Room\_server}}
+\doxysubsubsection{\texorpdfstring{Create\_room()}{Create\_room()}}
+{\footnotesize\ttfamily void Room\+\_\+server\+::\+Create\+\_\+room (\begin{DoxyParamCaption}\item[{udp\+::endpoint}]{\+\_\+sender\+\_\+endpoint }\end{DoxyParamCaption})}
+
+
+
+Creation of room. 
+
+Creation of new room
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sender\+\_\+endpoint} & \+: sender endpoint see doc boost/asio \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_room__server_a115dc7952e5484fc1094135fd71485aa}\label{class_room__server_a115dc7952e5484fc1094135fd71485aa}} 
+\index{Room\_server@{Room\_server}!Treating\_Game\_Loop@{Treating\_Game\_Loop}}
+\index{Treating\_Game\_Loop@{Treating\_Game\_Loop}!Room\_server@{Room\_server}}
+\doxysubsubsection{\texorpdfstring{Treating\_Game\_Loop()}{Treating\_Game\_Loop()}}
+{\footnotesize\ttfamily void Room\+\_\+server\+::\+Treating\+\_\+\+Game\+\_\+\+Loop (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{int}]{pos\+\_\+x,  }\item[{int}]{pos\+\_\+y,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+thread game loop 
+
+Threading data of room
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sender\+\_\+endpoint} & \+: sender endpoint see doc boost/asio \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/server/\mbox{\hyperlink{_room_8hpp}{Room.\+hpp}}\item 
+src/server/\mbox{\hyperlink{_room_8cpp}{Room.\+cpp}}\end{DoxyCompactItemize}

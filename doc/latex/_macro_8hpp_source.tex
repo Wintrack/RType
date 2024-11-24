@@ -1,0 +1,89 @@
+\hypertarget{_macro_8hpp_source}{}\doxysection{Macro.\+hpp}
+\label{_macro_8hpp_source}\index{include/game/Macro.hpp@{include/game/Macro.hpp}}
+\mbox{\hyperlink{_macro_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** TEK3}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Macro}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_entity_8hpp}{Entity.hpp}}"{}}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define STARSHIP "{}assets/sprites/starship.png"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define BACKGROUND "{}assets/sprites/Background.png"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define BULLET  "{}assets/sprites/bulletv1.png"{}}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define BADDUDE "{}assets/sprites/enemy1.png"{}}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define JOIN\_LOBBY\_INS 0}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define EXIT\_CLIENT\_INS 1}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define CREATE\_ROOM\_INS 2}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define JOIN\_ROOM 3}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define RETURN\_INS 4}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define JOIN\_GAME 8}}
+\DoxyCodeLine{34 \textcolor{comment}{//}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define JOINED\_LOBBY 5}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define JOINED\_ROOM 6}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define JOINED\_GAME 7}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define CHAMP\_DELIMITER -\/1}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define VAR\_DELIMITER -\/2}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define END\_DATA -\/3}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{51 \textcolor{keyword}{struct }\mbox{\hyperlink{structs___client}{s\_Client}}}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} IP;}
+\DoxyCodeLine{54     \textcolor{keywordtype}{int} Port;}
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{//Client envoit ceci avec l'Ins JOIN\_ROOM}}
+\DoxyCodeLine{58 \textcolor{comment}{//CREATE\_ROOM}}
+\DoxyCodeLine{66 \textcolor{comment}{}\textcolor{keyword}{struct }\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___c_r_e_a_t_e___r_o_o_m___client}{INSTRUCTION\_CREATE\_ROOM\_Client}} \{}
+\DoxyCodeLine{67     \textcolor{keywordtype}{int} instruction;}
+\DoxyCodeLine{68     std::string name\_room;}
+\DoxyCodeLine{69     \textcolor{keywordtype}{int} maxplay;}
+\DoxyCodeLine{70 \};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{79 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___j_o_i_n___l_o_b_b_y___serv}{INSTRUCTION\_JOIN\_LOBBY\_Serv}} \{}
+\DoxyCodeLine{80     \textcolor{keywordtype}{int} instruction;}
+\DoxyCodeLine{81     std::vector<std::string> rooms\_in\_lobby;}
+\DoxyCodeLine{82     std::vector<int> maxpl;}
+\DoxyCodeLine{83 \};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{92 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___j_o_i_n___r_o_o_m___client}{INSTRUCTION\_JOIN\_ROOM\_Client}} \{}
+\DoxyCodeLine{93     \textcolor{keywordtype}{int} instruction;}
+\DoxyCodeLine{94     std::string name;}
+\DoxyCodeLine{95     \mbox{\hyperlink{structs___client}{s\_Client}} client;}
+\DoxyCodeLine{96 \};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{105 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\_GENERIC}} \{}
+\DoxyCodeLine{106     \textcolor{keywordtype}{int} instruction;}
+\DoxyCodeLine{107     std::vector<std::string> rooms\_in\_lobby;}
+\DoxyCodeLine{108     std::vector<int16\_t> maxpl;}
+\DoxyCodeLine{109     std::string name\_room\_created;}
+\DoxyCodeLine{110     std::string name\_selected;}
+\DoxyCodeLine{111     std::vector<s\_Entity> RAM\_DATABASE;}
+\DoxyCodeLine{112     std::vector<int16\_t> info\_player;}
+\DoxyCodeLine{113 \};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 \textcolor{comment}{//IN GAME}}
+\DoxyCodeLine{117 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___serv__to___client__room}{INSTRUCTION\_Serv\_to\_Client\_room}} \{}
+\DoxyCodeLine{118 \};}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 }
+\DoxyCodeLine{128 \textcolor{comment}{//champ dans le vec info\_player}}
+\DoxyCodeLine{129 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___client__in__room}{INSTRUCTION\_Client\_in\_room}} \{}
+\DoxyCodeLine{130     \textcolor{keywordtype}{int} type; \textcolor{comment}{// soit un }}
+\DoxyCodeLine{131     \textcolor{keywordtype}{int} pos\_x;}
+\DoxyCodeLine{132     \textcolor{keywordtype}{int} pos\_y;}
+\DoxyCodeLine{133     \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{134 \};}
+
+\end{DoxyCode}

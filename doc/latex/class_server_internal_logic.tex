@@ -1,0 +1,190 @@
+\hypertarget{class_server_internal_logic}{}\doxysection{Server\+Internal\+Logic Class Reference}
+\label{class_server_internal_logic}\index{ServerInternalLogic@{ServerInternalLogic}}
+
+
+classe of \mbox{\hyperlink{class_server_internal_logic}{Server\+Internal\+Logic}}  
+
+
+
+
+{\ttfamily \#include $<$Server\+Internal\+Logic.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_server_internal_logic_a865abc15154eac68851bcbbe835ed439}{Server\+Internal\+Logic}} (std\+::string level\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_server_internal_logic_a25213f3486186781dab3f657f934820b}{$\sim$\+Server\+Internal\+Logic}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_internal_logic_a7e7444e80a1f70b65d519e57a16a9740}{Add\+\_\+new\+\_\+player}} ()
+\begin{DoxyCompactList}\small\item\em adding new player \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_internal_logic_a82534853923c5ca7601e8edab5d2a087}{DATABASE\+\_\+\+Update}} (std\+::vector$<$ s\+\_\+\+Entity $>$ entities\+\_\+for\+\_\+update)
+\begin{DoxyCompactList}\small\item\em updating data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_internal_logic_ac818fb618348e26b07abcfe756353198}{Receive\+\_\+from\+\_\+client}} (int type, int pos\+\_\+x, int pos\+\_\+y, int id)
+\begin{DoxyCompactList}\small\item\em receive info from clinet \end{DoxyCompactList}\item 
+i\+Entity $\ast$ \mbox{\hyperlink{class_server_internal_logic_a803be10d5b5ec882484f46f44ab5d055}{Create\+\_\+entity}} (std\+::string str, int pos\+\_\+y, int pos\+\_\+x)
+\begin{DoxyCompactList}\small\item\em create a new entity \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_internal_logic_a4e805d50e1bbf9242fc4ef1cf9299049}{Asynchronic\+\_\+\+Calculation}} ()
+\begin{DoxyCompactList}\small\item\em Asynchronous call. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_server_internal_logic_afa3c6e21516e394415148905da1847af}{Verify\+\_\+\+ID}} (int id)
+\begin{DoxyCompactList}\small\item\em Verification of id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_server_internal_logic_a994c795b3cb47acb9a1130540d9fc60e}\label{class_server_internal_logic_a994c795b3cb47acb9a1130540d9fc60e}} 
+std\+::vector$<$ s\+\_\+\+Entity $>$ {\bfseries get\+Ram} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_server_internal_logic_ad136c1365bc0eedd4af1f48de5f8efd7}\label{class_server_internal_logic_ad136c1365bc0eedd4af1f48de5f8efd7}} 
+std\+::vector$<$ int $>$ {\bfseries CLIENT\+\_\+\+IDS}
+\item 
+\mbox{\Hypertarget{class_server_internal_logic_a3c011b58505b53ced0a035b1d47ea3a5}\label{class_server_internal_logic_a3c011b58505b53ced0a035b1d47ea3a5}} 
+std\+::vector$<$ i\+Entity $\ast$ $>$ {\bfseries DATABASE}
+\item 
+\mbox{\Hypertarget{class_server_internal_logic_a8770aa70374837ef65ef0d29bd9651b5}\label{class_server_internal_logic_a8770aa70374837ef65ef0d29bd9651b5}} 
+int {\bfseries id\+\_\+generator}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+classe of \mbox{\hyperlink{class_server_internal_logic}{Server\+Internal\+Logic}} 
+
+class handle \mbox{\hyperlink{class_server_internal_logic}{Server\+Internal\+Logic}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_server_internal_logic_a865abc15154eac68851bcbbe835ed439}\label{class_server_internal_logic_a865abc15154eac68851bcbbe835ed439}} 
+\index{ServerInternalLogic@{ServerInternalLogic}!ServerInternalLogic@{ServerInternalLogic}}
+\index{ServerInternalLogic@{ServerInternalLogic}!ServerInternalLogic@{ServerInternalLogic}}
+\doxysubsubsection{\texorpdfstring{ServerInternalLogic()}{ServerInternalLogic()}}
+{\footnotesize\ttfamily Server\+Internal\+Logic\+::\+Server\+Internal\+Logic (\begin{DoxyParamCaption}\item[{std\+::string}]{level\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructorr of class \mbox{\hyperlink{class_server_internal_logic}{Server\+Internal\+Logic}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em level\+\_\+path} & \+: level to be loaded path \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_internal_logic_a25213f3486186781dab3f657f934820b}\label{class_server_internal_logic_a25213f3486186781dab3f657f934820b}} 
+\index{ServerInternalLogic@{ServerInternalLogic}!````~ServerInternalLogic@{$\sim$ServerInternalLogic}}
+\index{````~ServerInternalLogic@{$\sim$ServerInternalLogic}!ServerInternalLogic@{ServerInternalLogic}}
+\doxysubsubsection{\texorpdfstring{$\sim$ServerInternalLogic()}{~ServerInternalLogic()}}
+{\footnotesize\ttfamily Server\+Internal\+Logic\+::$\sim$\+Server\+Internal\+Logic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Destructor of class \mbox{\hyperlink{class_server_internal_logic}{Server\+Internal\+Logic}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_server_internal_logic_a7e7444e80a1f70b65d519e57a16a9740}\label{class_server_internal_logic_a7e7444e80a1f70b65d519e57a16a9740}} 
+\index{ServerInternalLogic@{ServerInternalLogic}!Add\_new\_player@{Add\_new\_player}}
+\index{Add\_new\_player@{Add\_new\_player}!ServerInternalLogic@{ServerInternalLogic}}
+\doxysubsubsection{\texorpdfstring{Add\_new\_player()}{Add\_new\_player()}}
+{\footnotesize\ttfamily void Server\+Internal\+Logic\+::\+Add\+\_\+new\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+adding new player 
+
+DAdd new player to the game \mbox{\Hypertarget{class_server_internal_logic_a4e805d50e1bbf9242fc4ef1cf9299049}\label{class_server_internal_logic_a4e805d50e1bbf9242fc4ef1cf9299049}} 
+\index{ServerInternalLogic@{ServerInternalLogic}!Asynchronic\_Calculation@{Asynchronic\_Calculation}}
+\index{Asynchronic\_Calculation@{Asynchronic\_Calculation}!ServerInternalLogic@{ServerInternalLogic}}
+\doxysubsubsection{\texorpdfstring{Asynchronic\_Calculation()}{Asynchronic\_Calculation()}}
+{\footnotesize\ttfamily void Server\+Internal\+Logic\+::\+Asynchronic\+\_\+\+Calculation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Asynchronous call. 
+
+Asynchronous call \mbox{\Hypertarget{class_server_internal_logic_a803be10d5b5ec882484f46f44ab5d055}\label{class_server_internal_logic_a803be10d5b5ec882484f46f44ab5d055}} 
+\index{ServerInternalLogic@{ServerInternalLogic}!Create\_entity@{Create\_entity}}
+\index{Create\_entity@{Create\_entity}!ServerInternalLogic@{ServerInternalLogic}}
+\doxysubsubsection{\texorpdfstring{Create\_entity()}{Create\_entity()}}
+{\footnotesize\ttfamily i\+Entity $\ast$ Server\+Internal\+Logic\+::\+Create\+\_\+entity (\begin{DoxyParamCaption}\item[{std\+::string}]{str,  }\item[{int}]{pos\+\_\+y,  }\item[{int}]{pos\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+create a new entity 
+
+Create a new entity in the databass
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & \+: type of entity \\
+\hline
+{\em pos\+\_\+x} & \+: pos x of entity \\
+\hline
+{\em pos\+\_\+y} & \+: pos y of entity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+i\+Entity pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_server_internal_logic_a82534853923c5ca7601e8edab5d2a087}\label{class_server_internal_logic_a82534853923c5ca7601e8edab5d2a087}} 
+\index{ServerInternalLogic@{ServerInternalLogic}!DATABASE\_Update@{DATABASE\_Update}}
+\index{DATABASE\_Update@{DATABASE\_Update}!ServerInternalLogic@{ServerInternalLogic}}
+\doxysubsubsection{\texorpdfstring{DATABASE\_Update()}{DATABASE\_Update()}}
+{\footnotesize\ttfamily void Server\+Internal\+Logic\+::\+DATABASE\+\_\+\+Update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ s\+\_\+\+Entity $>$}]{entities\+\_\+for\+\_\+update }\end{DoxyParamCaption})}
+
+
+
+updating data 
+
+Update the databass of the server depending on entity action
+
+
+\begin{DoxyParams}{Parameters}
+{\em entities\+\_\+for\+\_\+update} & \+: entity that need to be updated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_internal_logic_ac818fb618348e26b07abcfe756353198}\label{class_server_internal_logic_ac818fb618348e26b07abcfe756353198}} 
+\index{ServerInternalLogic@{ServerInternalLogic}!Receive\_from\_client@{Receive\_from\_client}}
+\index{Receive\_from\_client@{Receive\_from\_client}!ServerInternalLogic@{ServerInternalLogic}}
+\doxysubsubsection{\texorpdfstring{Receive\_from\_client()}{Receive\_from\_client()}}
+{\footnotesize\ttfamily void Server\+Internal\+Logic\+::\+Receive\+\_\+from\+\_\+client (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{int}]{pos\+\_\+x,  }\item[{int}]{pos\+\_\+y,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+receive info from clinet 
+
+Receive info of entity from client
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & \+: type of entity \\
+\hline
+{\em pos\+\_\+x} & \+: pos x of entity \\
+\hline
+{\em pos\+\_\+y} & \+: pos y of entity \\
+\hline
+{\em id} & \+: id of entity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_internal_logic_afa3c6e21516e394415148905da1847af}\label{class_server_internal_logic_afa3c6e21516e394415148905da1847af}} 
+\index{ServerInternalLogic@{ServerInternalLogic}!Verify\_ID@{Verify\_ID}}
+\index{Verify\_ID@{Verify\_ID}!ServerInternalLogic@{ServerInternalLogic}}
+\doxysubsubsection{\texorpdfstring{Verify\_ID()}{Verify\_ID()}}
+{\footnotesize\ttfamily int Server\+Internal\+Logic\+::\+Verify\+\_\+\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Verification of id. 
+
+verify that id existe
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: id to verif \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/server/\mbox{\hyperlink{_server_internal_logic_8hpp}{Server\+Internal\+Logic.\+hpp}}\item 
+src/server/\mbox{\hyperlink{_server_internal_logic_8cpp}{Server\+Internal\+Logic.\+cpp}}\end{DoxyCompactItemize}

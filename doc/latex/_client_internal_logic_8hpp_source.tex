@@ -1,0 +1,38 @@
+\hypertarget{_client_internal_logic_8hpp_source}{}\doxysection{Client\+Internal\+Logic.\+hpp}
+\label{_client_internal_logic_8hpp_source}\index{include/client/ClientInternalLogic.hpp@{include/client/ClientInternalLogic.hpp}}
+\mbox{\hyperlink{_client_internal_logic_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** TEK3}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** ClientInternalLogic}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef CLIENTINTERNALLOGIC\_HPP\_}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define CLIENTINTERNALLOGIC\_HPP\_}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_system_8hpp}{System.hpp}}"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{27 \textcolor{keyword}{class }\mbox{\hyperlink{class_client_internal_logic}{ClientInternalLogic}} \{}
+\DoxyCodeLine{28     \textcolor{keyword}{public}:}
+\DoxyCodeLine{37         \mbox{\hyperlink{class_client_internal_logic}{ClientInternalLogic}}(std::vector<s\_Entity> Original\_RAM, \textcolor{keywordtype}{int} new\_id);}
+\DoxyCodeLine{38         }
+\DoxyCodeLine{44         \mbox{\hyperlink{class_client_internal_logic_ad1ca150f316dcf462de65439d688916b}{\string~ClientInternalLogic}}();}
+\DoxyCodeLine{50         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_internal_logic_a49c0d9cd61762d3b2b151cde1779ea14}{Client\_Display}}();}
+\DoxyCodeLine{57         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_internal_logic_a67d8028cf60c1e84b05ee776b6018868}{Verify\_Cache}}(std::vector<s\_Entity> Original\_RAM);}
+\DoxyCodeLine{64         \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\_GENERIC}} \mbox{\hyperlink{class_client_internal_logic_a7f3acd6cf2ef53ba25a9cd3f7f740b00}{getInfos}}();}
+\DoxyCodeLine{65     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{66         \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{67         \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\_GENERIC}} SENDED\_INFOS;}
+\DoxyCodeLine{68         \mbox{\hyperlink{class_systems_1_1_rendering_system}{Systems::RenderingSystem}} RenderSys;}
+\DoxyCodeLine{69         \textcolor{comment}{//Systems::AudioSystem AudioSys;}}
+\DoxyCodeLine{70         std::vector<s\_Entity> DATABASE;}
+\DoxyCodeLine{71         std::vector<s\_Entity> CACHE;}
+\DoxyCodeLine{72         std::vector<s\_Entity> Display\_on\_screen;}
+\DoxyCodeLine{73     \textcolor{keyword}{private}:}
+\DoxyCodeLine{74 \};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !CLIENTINTERNALLOGIC\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

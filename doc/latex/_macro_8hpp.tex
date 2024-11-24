@@ -1,0 +1,89 @@
+\hypertarget{_macro_8hpp}{}\doxysection{include/game/\+Macro.hpp File Reference}
+\label{_macro_8hpp}\index{include/game/Macro.hpp@{include/game/Macro.hpp}}
+
+
+Macro.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}Entity.\+hpp\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structs___client}{s\+\_\+\+Client}}
+\begin{DoxyCompactList}\small\item\em Object of client. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___c_r_e_a_t_e___r_o_o_m___client}{INSTRUCTION\+\_\+\+CREATE\+\_\+\+ROOM\+\_\+\+Client}}
+\begin{DoxyCompactList}\small\item\em Creation of room. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___j_o_i_n___l_o_b_b_y___serv}{INSTRUCTION\+\_\+\+JOIN\+\_\+\+LOBBY\+\_\+\+Serv}}
+\begin{DoxyCompactList}\small\item\em Join lobby. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___j_o_i_n___r_o_o_m___client}{INSTRUCTION\+\_\+\+JOIN\+\_\+\+ROOM\+\_\+\+Client}}
+\begin{DoxyCompactList}\small\item\em Join room. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\+\_\+\+GENERIC}}
+\begin{DoxyCompactList}\small\item\em Data exchange by server and client. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___serv__to___client__room}{INSTRUCTION\+\_\+\+Serv\+\_\+to\+\_\+\+Client\+\_\+room}}
+\item 
+struct \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___client__in__room}{INSTRUCTION\+\_\+\+Client\+\_\+in\+\_\+room}}
+\begin{DoxyCompactList}\small\item\em Info to client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a513fc27d32d969d14ca1cb642999df60}\label{_macro_8hpp_a513fc27d32d969d14ca1cb642999df60}} 
+\#define {\bfseries STARSHIP}~\char`\"{}assets/sprites/starship.\+png\char`\"{}
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a850b2f07a67b73890889e63fb8a49fda}\label{_macro_8hpp_a850b2f07a67b73890889e63fb8a49fda}} 
+\#define {\bfseries BACKGROUND}~\char`\"{}assets/sprites/Background.\+png\char`\"{}
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a9c3c35f9545d4bd20d9c19ee86a3f067}\label{_macro_8hpp_a9c3c35f9545d4bd20d9c19ee86a3f067}} 
+\#define {\bfseries BULLET}~\char`\"{}assets/sprites/bulletv1.\+png\char`\"{}
+\item 
+\mbox{\Hypertarget{_macro_8hpp_ab924da3a1c56935dfc1d44db05274d5e}\label{_macro_8hpp_ab924da3a1c56935dfc1d44db05274d5e}} 
+\#define {\bfseries BADDUDE}~\char`\"{}assets/sprites/enemy1.\+png\char`\"{}
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a6c57c4e39682aa208497ac04efda8566}\label{_macro_8hpp_a6c57c4e39682aa208497ac04efda8566}} 
+\#define {\bfseries JOIN\+\_\+\+LOBBY\+\_\+\+INS}~0
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a9c6c2937382da85f6be8f4cc819f4bb7}\label{_macro_8hpp_a9c6c2937382da85f6be8f4cc819f4bb7}} 
+\#define {\bfseries EXIT\+\_\+\+CLIENT\+\_\+\+INS}~1
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a9a4caf7d1328b692c5ddb1b998a92be3}\label{_macro_8hpp_a9a4caf7d1328b692c5ddb1b998a92be3}} 
+\#define {\bfseries CREATE\+\_\+\+ROOM\+\_\+\+INS}~2
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a5d26e054b2861b9f46e1690af3489cf0}\label{_macro_8hpp_a5d26e054b2861b9f46e1690af3489cf0}} 
+\#define {\bfseries JOIN\+\_\+\+ROOM}~3
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a32893457ee15d019e17bbe0123e890ca}\label{_macro_8hpp_a32893457ee15d019e17bbe0123e890ca}} 
+\#define {\bfseries RETURN\+\_\+\+INS}~4
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a255431f145625b13376f495497440202}\label{_macro_8hpp_a255431f145625b13376f495497440202}} 
+\#define {\bfseries JOIN\+\_\+\+GAME}~8
+\item 
+\mbox{\Hypertarget{_macro_8hpp_adb673c08b3bf9715052786388f97d7ee}\label{_macro_8hpp_adb673c08b3bf9715052786388f97d7ee}} 
+\#define {\bfseries JOINED\+\_\+\+LOBBY}~5
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a7d2d6ec81711e210da314243bf1e7145}\label{_macro_8hpp_a7d2d6ec81711e210da314243bf1e7145}} 
+\#define {\bfseries JOINED\+\_\+\+ROOM}~6
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a8df2d7b2d2b0d9473c4504a28f52d799}\label{_macro_8hpp_a8df2d7b2d2b0d9473c4504a28f52d799}} 
+\#define {\bfseries JOINED\+\_\+\+GAME}~7
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a4141baf6a221a99f27bb7f4b879def20}\label{_macro_8hpp_a4141baf6a221a99f27bb7f4b879def20}} 
+\#define {\bfseries CHAMP\+\_\+\+DELIMITER}~-\/1
+\item 
+\mbox{\Hypertarget{_macro_8hpp_a16b4df4c531edc0aeb75f7776ccc2e18}\label{_macro_8hpp_a16b4df4c531edc0aeb75f7776ccc2e18}} 
+\#define {\bfseries VAR\+\_\+\+DELIMITER}~-\/2
+\item 
+\mbox{\Hypertarget{_macro_8hpp_ab989978585b78e98ff314e8abb5f9bb0}\label{_macro_8hpp_ab989978585b78e98ff314e8abb5f9bb0}} 
+\#define {\bfseries END\+\_\+\+DATA}~-\/3
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Macro. 
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/10-\/17 
+\end{DoxyDate}

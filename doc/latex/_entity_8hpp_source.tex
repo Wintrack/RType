@@ -1,0 +1,332 @@
+\hypertarget{_entity_8hpp_source}{}\doxysection{Entity.\+hpp}
+\label{_entity_8hpp_source}\index{include/game/Entity.hpp@{include/game/Entity.hpp}}
+\mbox{\hyperlink{_entity_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** TEK3}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Entity}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_macro_8hpp}{Macro.hpp}}"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}raylib.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#ifndef ENTITY\_HPP\_}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define ENTITY\_HPP\_}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{31 \textcolor{keyword}{struct }s\_Entity}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} type;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} underType;}
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} health;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} pos\_y; \textcolor{comment}{// modif par }}
+\DoxyCodeLine{38     \textcolor{keywordtype}{int} pos\_x;}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} frame;         \textcolor{comment}{// get\_update()}}
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} damage;   \textcolor{comment}{// if (On\_screen == false)  \{}}
+\DoxyCodeLine{41     Texture2D sprite; \textcolor{comment}{// int id\_to\_kill = disp.at().id}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{int} i\_frame;      \textcolor{comment}{// display.at(..).\string~destructor}}
+\DoxyCodeLine{43                        \textcolor{comment}{// display.erase}}
+\DoxyCodeLine{44                        \textcolor{comment}{// while (cache id != id\_to\_erase)}}
+\DoxyCodeLine{45                        \textcolor{comment}{// \} ... souvenir de lindex puis erase du cache}}
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{54 \textcolor{keyword}{class }iEntity \{}
+\DoxyCodeLine{55     \textcolor{keyword}{public}:}
+\DoxyCodeLine{63         \textcolor{keyword}{virtual} \string~iEntity() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{64         \textcolor{comment}{//SETTERS//}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{73         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} get\_update(s\_Entity) = 0;}
+\DoxyCodeLine{74         \textcolor{comment}{//GETTERS//}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{83         \textcolor{keyword}{virtual} s\_Entity *getStruc() = 0;}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{94         \textcolor{keyword}{virtual} std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram) = 0;}
+\DoxyCodeLine{103         \textcolor{keyword}{virtual} iEntity *Collision\_handler(std::vector<std::vector<int>>, std::vector<iEntity *>, \textcolor{keywordtype}{int} *id\_generator) = 0;}
+\DoxyCodeLine{110         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Frame\_handler() = 0;}
+\DoxyCodeLine{111         \textcolor{comment}{//virtual std::vector<std::vector<std::vector<s\_Entity>>> Collision\_handler(s\_Entity Target, std::vector<s\_Entity> RAMMED\_DATABASE) = 0;}}
+\DoxyCodeLine{112         s\_Entity struc;}
+\DoxyCodeLine{113         \textcolor{keywordtype}{int} max\_frame;}
+\DoxyCodeLine{114         \textcolor{keywordtype}{int} width;}
+\DoxyCodeLine{115         \textcolor{keywordtype}{int} height;}
+\DoxyCodeLine{116         \textcolor{keywordtype}{int} mod;}
+\DoxyCodeLine{117         \textcolor{comment}{//DATAS//}}
+\DoxyCodeLine{118 \textcolor{comment}{/*         int type;}}
+\DoxyCodeLine{119 \textcolor{comment}{        int id;}}
+\DoxyCodeLine{120 \textcolor{comment}{        int health;}}
+\DoxyCodeLine{121 \textcolor{comment}{        std::vector<float> position;}}
+\DoxyCodeLine{122 \textcolor{comment}{        Texture2D sprite;}}
+\DoxyCodeLine{123 \textcolor{comment}{        int frame;}}
+\DoxyCodeLine{124 \textcolor{comment}{        int damage;}}
+\DoxyCodeLine{125 \textcolor{comment}{        bool on\_screen; */}}
+\DoxyCodeLine{126     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{127     \textcolor{keyword}{private}:}
+\DoxyCodeLine{128 \};}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{136 \textcolor{keyword}{class }Player : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{137     \textcolor{keyword}{public}:}
+\DoxyCodeLine{138         Player(s\_Entity);}
+\DoxyCodeLine{139         \string~Player();}
+\DoxyCodeLine{140         \textcolor{comment}{//SETTERS//}}
+\DoxyCodeLine{141         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{142         \textcolor{comment}{//GETTERS//}}
+\DoxyCodeLine{143         s\_Entity *getStruc();}
+\DoxyCodeLine{144         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{145         iEntity *Collision\_handler(std::vector<std::vector<int>> ids, std::vector<iEntity *> ram, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{146         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{147         \textcolor{comment}{//std::vector<std::vector<std::vector<s\_Entity>>> Collision\_handler(s\_Entity Target, std::vector<s\_Entity> RAMMED\_DATABASE);}}
+\DoxyCodeLine{148         \textcolor{keywordtype}{int} bonus;}
+\DoxyCodeLine{149         \textcolor{keywordtype}{int} weapon;}
+\DoxyCodeLine{150         \textcolor{keywordtype}{int} maxCount;}
+\DoxyCodeLine{151         \textcolor{keywordtype}{int} count;}
+\DoxyCodeLine{152         \textcolor{comment}{//DATAS//}}
+\DoxyCodeLine{153         \textcolor{comment}{/* int type;}}
+\DoxyCodeLine{154 \textcolor{comment}{        int id;}}
+\DoxyCodeLine{155 \textcolor{comment}{        int health;}}
+\DoxyCodeLine{156 \textcolor{comment}{        std::vector<float> position;}}
+\DoxyCodeLine{157 \textcolor{comment}{        Texture2D sprite;}}
+\DoxyCodeLine{158 \textcolor{comment}{        int frame;}}
+\DoxyCodeLine{159 \textcolor{comment}{        int damage;}}
+\DoxyCodeLine{160 \textcolor{comment}{        bool on\_screen; */}}
+\DoxyCodeLine{161     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{162     \textcolor{keyword}{private}:}
+\DoxyCodeLine{163 \};}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{171 \textcolor{keyword}{class }Enemy : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{172     \textcolor{keyword}{public}:}
+\DoxyCodeLine{173         Enemy(s\_Entity);}
+\DoxyCodeLine{174         \string~Enemy();}
+\DoxyCodeLine{175         \textcolor{comment}{//SETTERS//}}
+\DoxyCodeLine{176         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{177         \textcolor{comment}{//GETTERS//}}
+\DoxyCodeLine{178         s\_Entity *getStruc();}
+\DoxyCodeLine{179         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{180         iEntity *Collision\_handler(std::vector<std::vector<int>> ids, std::vector<iEntity *> ram, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{181         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{182         \textcolor{comment}{//std::vector<std::vector<std::vector<s\_Entity>>> Collision\_handler(s\_Entity Target, std::vector<s\_Entity> RAMMED\_DATABASE);}}
+\DoxyCodeLine{183         \textcolor{comment}{//DATAS//}}
+\DoxyCodeLine{184         \textcolor{comment}{/* int type;}}
+\DoxyCodeLine{185 \textcolor{comment}{        int id;}}
+\DoxyCodeLine{186 \textcolor{comment}{        int health;}}
+\DoxyCodeLine{187 \textcolor{comment}{        std::vector<float> position;}}
+\DoxyCodeLine{188 \textcolor{comment}{        Texture2D sprite;}}
+\DoxyCodeLine{189 \textcolor{comment}{        int frame;}}
+\DoxyCodeLine{190 \textcolor{comment}{        int damage;}}
+\DoxyCodeLine{191 \textcolor{comment}{        bool on\_screen; */}}
+\DoxyCodeLine{192     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{193     \textcolor{keyword}{private}:}
+\DoxyCodeLine{194 \};}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{202 \textcolor{keyword}{class }ShootingEnemy : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{203     \textcolor{keyword}{public}:}
+\DoxyCodeLine{204         ShootingEnemy(s\_Entity);}
+\DoxyCodeLine{205         \string~ShootingEnemy();}
+\DoxyCodeLine{206         \textcolor{comment}{//SETTERS//}}
+\DoxyCodeLine{207         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{208         \textcolor{comment}{//GETTERS//}}
+\DoxyCodeLine{209         s\_Entity *getStruc();}
+\DoxyCodeLine{210         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{211         iEntity *Collision\_handler(std::vector<std::vector<int>> ids, std::vector<iEntity *> ram, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{212         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{213         \textcolor{keywordtype}{int} count;}
+\DoxyCodeLine{214         \textcolor{comment}{//std::vector<std::vector<std::vector<s\_Entity>>> Collision\_handler(s\_Entity Target, std::vector<s\_Entity> RAMMED\_DATABASE);}}
+\DoxyCodeLine{215         \textcolor{comment}{//DATAS//}}
+\DoxyCodeLine{216         \textcolor{comment}{/* int type;}}
+\DoxyCodeLine{217 \textcolor{comment}{        int id;}}
+\DoxyCodeLine{218 \textcolor{comment}{        int health;}}
+\DoxyCodeLine{219 \textcolor{comment}{        std::vector<float> position;}}
+\DoxyCodeLine{220 \textcolor{comment}{        Texture2D sprite;}}
+\DoxyCodeLine{221 \textcolor{comment}{        int frame;}}
+\DoxyCodeLine{222 \textcolor{comment}{        int damage;}}
+\DoxyCodeLine{223 \textcolor{comment}{        bool on\_screen; */}}
+\DoxyCodeLine{224     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{225     \textcolor{keyword}{private}:}
+\DoxyCodeLine{226 \};}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{234 \textcolor{keyword}{class }ComposedEnemy : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{235     \textcolor{keyword}{public}:}
+\DoxyCodeLine{236         ComposedEnemy(std::vector<s\_Entity>);}
+\DoxyCodeLine{237         \string~ComposedEnemy();}
+\DoxyCodeLine{238         \textcolor{comment}{//SETTERS//}}
+\DoxyCodeLine{239         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{240         \textcolor{comment}{//GETTERS//}}
+\DoxyCodeLine{241         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{242         s\_Entity *getStruc();}
+\DoxyCodeLine{243         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{244         std::vector<s\_Entity> PARTS;}
+\DoxyCodeLine{245         iEntity *Collision\_handler(std::vector<std::vector<int>> ids, std::vector<iEntity *> ram, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{246         \textcolor{keywordtype}{int} direction\_x;}
+\DoxyCodeLine{247         \textcolor{keywordtype}{int} direction\_y;}
+\DoxyCodeLine{248         \textcolor{keywordtype}{int} count;}
+\DoxyCodeLine{249 \};}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{257 \textcolor{keyword}{class }Boss : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{258     \textcolor{keyword}{public}:}
+\DoxyCodeLine{259         Boss(std::vector<s\_Entity>);}
+\DoxyCodeLine{260         \string~Boss();}
+\DoxyCodeLine{261         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{262         \textcolor{comment}{//GETTERS//}}
+\DoxyCodeLine{263         s\_Entity *getStruc();}
+\DoxyCodeLine{264         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{265         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{266         \textcolor{keywordtype}{void} PHASE\_1();}
+\DoxyCodeLine{267         \textcolor{keywordtype}{void} PHASE\_2();}
+\DoxyCodeLine{268         \textcolor{keywordtype}{void} PHASE\_3();}
+\DoxyCodeLine{269         std::vector<s\_Entity> PARTS;}
+\DoxyCodeLine{270         iEntity *Collision\_handler(std::vector<std::vector<int>> ids, std::vector<iEntity *> ram, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{271         \textcolor{keywordtype}{int} direction\_x;}
+\DoxyCodeLine{272         \textcolor{keywordtype}{int} direction\_y;}
+\DoxyCodeLine{273         \textcolor{keywordtype}{int} direction\_ypart1;}
+\DoxyCodeLine{274         \textcolor{keywordtype}{int} direction\_ypart2;}
+\DoxyCodeLine{275         \textcolor{keywordtype}{int} count;}
+\DoxyCodeLine{276         \textcolor{keywordtype}{int} countCanon1;}
+\DoxyCodeLine{277         \textcolor{keywordtype}{int} countCanon2;}
+\DoxyCodeLine{278         \textcolor{keywordtype}{int} countShooting1;}
+\DoxyCodeLine{279         \textcolor{keywordtype}{int} countShooting2;}
+\DoxyCodeLine{280         \textcolor{keywordtype}{int} phase;}
+\DoxyCodeLine{281 \};}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{289 \textcolor{keyword}{class }Dummy : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{290     \textcolor{keyword}{public}:}
+\DoxyCodeLine{291         Dummy(s\_Entity);}
+\DoxyCodeLine{292         \string~Dummy();}
+\DoxyCodeLine{293         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{294         s\_Entity *getStruc();}
+\DoxyCodeLine{295         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{296         iEntity *Collision\_handler(std::vector<std::vector<int>> ids, std::vector<iEntity *> ram, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{297         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{298         \textcolor{keywordtype}{bool} isEntity;}
+\DoxyCodeLine{299 \};}
+\DoxyCodeLine{300 }
+\DoxyCodeLine{306 \textcolor{keyword}{class }Bonus : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{307     \textcolor{keyword}{public}:}
+\DoxyCodeLine{308         Bonus(s\_Entity);}
+\DoxyCodeLine{309         \string~Bonus();}
+\DoxyCodeLine{310         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{311         s\_Entity *getStruc();}
+\DoxyCodeLine{312         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{313         iEntity *Collision\_handler(std::vector<std::vector<int>> ids, std::vector<iEntity *> ram, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{314         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{315 \};}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{323 \textcolor{keyword}{class }Bullet : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{324     \textcolor{keyword}{public}:}
+\DoxyCodeLine{325         Bullet(s\_Entity, \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{326         \string~Bullet();}
+\DoxyCodeLine{327         \textcolor{comment}{//SETTERS//}}
+\DoxyCodeLine{328         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{329         \textcolor{comment}{//GETTERS//}}
+\DoxyCodeLine{330         s\_Entity *getStruc();}
+\DoxyCodeLine{331         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{332         iEntity *Collision\_handler(std::vector<std::vector<int>> ids, std::vector<iEntity *> ram, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{333         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{334         \textcolor{keywordtype}{bool} isAllied;}
+\DoxyCodeLine{335         \textcolor{comment}{//std::vector<std::vector<std::vector<s\_Entity>>> Collision\_handler(s\_Entity Target, std::vector<s\_Entity> RAMMED\_DATABASE); }}
+\DoxyCodeLine{336         \textcolor{comment}{//DATAS//}}
+\DoxyCodeLine{337         \textcolor{comment}{/* int type;}}
+\DoxyCodeLine{338 \textcolor{comment}{        int id;}}
+\DoxyCodeLine{339 \textcolor{comment}{        int health;}}
+\DoxyCodeLine{340 \textcolor{comment}{        std::vector<float> position;}}
+\DoxyCodeLine{341 \textcolor{comment}{        Texture2D sprite;}}
+\DoxyCodeLine{342 \textcolor{comment}{        int frame;}}
+\DoxyCodeLine{343 \textcolor{comment}{        int damage;}}
+\DoxyCodeLine{344 \textcolor{comment}{        bool on\_screen; */}}
+\DoxyCodeLine{345     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{346     \textcolor{keyword}{private}:}
+\DoxyCodeLine{347 \};}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{355 \textcolor{keyword}{class }Laser : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{356     \textcolor{keyword}{public}:}
+\DoxyCodeLine{357         Laser(s\_Entity, \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{358         \string~Laser();}
+\DoxyCodeLine{359         \textcolor{comment}{//SETTERS//}}
+\DoxyCodeLine{360         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{361         \textcolor{comment}{//GETTERS//}}
+\DoxyCodeLine{362         s\_Entity *getStruc();}
+\DoxyCodeLine{363         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{364         iEntity *Collision\_handler(std::vector<std::vector<int>> ids, std::vector<iEntity *> ram, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{365         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{366         \textcolor{keywordtype}{bool} isAllied;}
+\DoxyCodeLine{367         \textcolor{keywordtype}{int} count;}
+\DoxyCodeLine{368         \textcolor{comment}{//std::vector<std::vector<std::vector<s\_Entity>>> Collision\_handler(s\_Entity Target, std::vector<s\_Entity> RAMMED\_DATABASE); }}
+\DoxyCodeLine{369         \textcolor{comment}{//DATAS//}}
+\DoxyCodeLine{370         \textcolor{comment}{/* int type;}}
+\DoxyCodeLine{371 \textcolor{comment}{        int id;}}
+\DoxyCodeLine{372 \textcolor{comment}{        int health;}}
+\DoxyCodeLine{373 \textcolor{comment}{        std::vector<float> position;}}
+\DoxyCodeLine{374 \textcolor{comment}{        Texture2D sprite;}}
+\DoxyCodeLine{375 \textcolor{comment}{        int frame;}}
+\DoxyCodeLine{376 \textcolor{comment}{        int damage;}}
+\DoxyCodeLine{377 \textcolor{comment}{        bool on\_screen; */}}
+\DoxyCodeLine{378     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{379 \};}
+\DoxyCodeLine{380 }
+\DoxyCodeLine{387 \textcolor{keyword}{class }Bloc : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{388     \textcolor{keyword}{public}:}
+\DoxyCodeLine{389         Bloc(s\_Entity);}
+\DoxyCodeLine{390         \string~Bloc();}
+\DoxyCodeLine{391         \textcolor{comment}{//SETTERS//}}
+\DoxyCodeLine{392         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{393         \textcolor{comment}{//GETTERS//}}
+\DoxyCodeLine{394         s\_Entity *getStruc();}
+\DoxyCodeLine{395         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{396         iEntity *Collision\_handler(std::vector<std::vector<int>>, std::vector<iEntity *>, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{397         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{398         \textcolor{comment}{//std::vector<std::vector<std::vector<s\_Entity>>> Collision\_handler(s\_Entity Target, std::vector<s\_Entity> RAMMED\_DATABASE);}}
+\DoxyCodeLine{399         \textcolor{comment}{//DATAS//}}
+\DoxyCodeLine{400         \textcolor{comment}{/* int type;}}
+\DoxyCodeLine{401 \textcolor{comment}{        int id;}}
+\DoxyCodeLine{402 \textcolor{comment}{        int health;}}
+\DoxyCodeLine{403 \textcolor{comment}{        std::vector<float> position;}}
+\DoxyCodeLine{404 \textcolor{comment}{        Texture2D sprite;}}
+\DoxyCodeLine{405 \textcolor{comment}{        int frame;}}
+\DoxyCodeLine{406 \textcolor{comment}{        int damage;}}
+\DoxyCodeLine{407 \textcolor{comment}{        bool on\_screen; */}}
+\DoxyCodeLine{408     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{409     \textcolor{keyword}{private}:}
+\DoxyCodeLine{410 \};}
+\DoxyCodeLine{411 }
+\DoxyCodeLine{418 \textcolor{keyword}{class }Weapon : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{419     \textcolor{keyword}{public}:}
+\DoxyCodeLine{420         Weapon(s\_Entity);}
+\DoxyCodeLine{421         \string~Weapon();}
+\DoxyCodeLine{422         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{423         s\_Entity *getStruc();}
+\DoxyCodeLine{424         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{425         iEntity *Collision\_handler(std::vector<std::vector<int>>, std::vector<iEntity *>, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{426         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{427 \};}
+\DoxyCodeLine{428 }
+\DoxyCodeLine{435 \textcolor{keyword}{class }Rocket : \textcolor{keyword}{public} iEntity \{}
+\DoxyCodeLine{436     \textcolor{keyword}{public}:}
+\DoxyCodeLine{437         Rocket(s\_Entity, \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{438         \string~Rocket();}
+\DoxyCodeLine{439         \textcolor{comment}{//SETTERS//}}
+\DoxyCodeLine{440         \textcolor{keywordtype}{void} get\_update(s\_Entity);}
+\DoxyCodeLine{441         \textcolor{comment}{//GETTERS//}}
+\DoxyCodeLine{442         s\_Entity *getStruc();}
+\DoxyCodeLine{443         std::vector<iEntity *> Movement\_handler(std::vector<iEntity *> ram);}
+\DoxyCodeLine{444         iEntity *Collision\_handler(std::vector<std::vector<int>> ids, std::vector<iEntity *> ram, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{445         \textcolor{keywordtype}{void} Frame\_handler();}
+\DoxyCodeLine{446         \textcolor{keywordtype}{bool} isAllied;}
+\DoxyCodeLine{447         \textcolor{comment}{//std::vector<std::vector<std::vector<s\_Entity>>> Collision\_handler(s\_Entity Target, std::vector<s\_Entity> RAMMED\_DATABASE); }}
+\DoxyCodeLine{448         \textcolor{comment}{//DATAS//}}
+\DoxyCodeLine{449         \textcolor{comment}{/* int type;}}
+\DoxyCodeLine{450 \textcolor{comment}{        int id;}}
+\DoxyCodeLine{451 \textcolor{comment}{        int health;}}
+\DoxyCodeLine{452 \textcolor{comment}{        std::vector<float> position;}}
+\DoxyCodeLine{453 \textcolor{comment}{        Texture2D sprite;}}
+\DoxyCodeLine{454 \textcolor{comment}{        int frame;}}
+\DoxyCodeLine{455 \textcolor{comment}{        int damage;}}
+\DoxyCodeLine{456 \textcolor{comment}{        bool on\_screen; */}}
+\DoxyCodeLine{457     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{458     \textcolor{keyword}{private}:}
+\DoxyCodeLine{459 \};}
+\DoxyCodeLine{460 }
+\DoxyCodeLine{461 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !ENTITY\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

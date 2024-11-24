@@ -1,0 +1,39 @@
+\hypertarget{fire_8hpp_source}{}\doxysection{fire.\+hpp}
+\label{fire_8hpp_source}\index{include/game/fire.hpp@{include/game/fire.hpp}}
+\mbox{\hyperlink{fire_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{comment}{/*}}
+\DoxyCodeLine{4 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{5 \textcolor{comment}{** B-\/CPP-\/500-\/MAR-\/5-\/1-\/rtype-\/theo.garnier}}
+\DoxyCodeLine{6 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{7 \textcolor{comment}{** fire.hpp}}
+\DoxyCodeLine{8 \textcolor{comment}{*/}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}raylib.h"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classfire}{fire}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     Texture2D \mbox{\hyperlink{classfire_aebf82e03da090f05916bd2a3a90fdef4}{bullet}};}
+\DoxyCodeLine{27     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classfire_aa5e5a8badd56bcfe02875376775add08}{texture}};}
+\DoxyCodeLine{28     Vector2 \mbox{\hyperlink{classfire_a15be1ec9358c83f9e5f933035b779763}{bulletPos}};}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classfire_aec5ba49fb297745cf04fc36484922bd5}{bulletActive}};}
+\DoxyCodeLine{30     \mbox{\hyperlink{classfire_a3d86fa941b4885cabeb657a58b956b43}{fire}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classfire_aa5e5a8badd56bcfe02875376775add08}{texture}}, Vector2 \mbox{\hyperlink{classfire_a15be1ec9358c83f9e5f933035b779763}{bulletPos}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{classfire_aec5ba49fb297745cf04fc36484922bd5}{bulletActive}})}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         \mbox{\hyperlink{classfire_aebf82e03da090f05916bd2a3a90fdef4}{bullet}} = LoadTexture(\mbox{\hyperlink{classfire_aa5e5a8badd56bcfe02875376775add08}{texture}});}
+\DoxyCodeLine{33         \mbox{\hyperlink{classfire_aec5ba49fb297745cf04fc36484922bd5}{bulletActive}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{34         \mbox{\hyperlink{classfire_a15be1ec9358c83f9e5f933035b779763}{bulletPos}} = (Vector2)\{\mbox{\hyperlink{classfire_a15be1ec9358c83f9e5f933035b779763}{bulletPos}}.x , \mbox{\hyperlink{classfire_a15be1ec9358c83f9e5f933035b779763}{bulletPos}}.y\};}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36     \mbox{\hyperlink{classfire_a39c21e95b724c2db74e7da1e2531a937}{\string~fire}}()}
+\DoxyCodeLine{37     \{}
+\DoxyCodeLine{38         \mbox{\hyperlink{classfire_aec5ba49fb297745cf04fc36484922bd5}{bulletActive}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{39         UnloadTexture(\mbox{\hyperlink{classfire_aebf82e03da090f05916bd2a3a90fdef4}{bullet}});}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41 \};}
+
+\end{DoxyCode}

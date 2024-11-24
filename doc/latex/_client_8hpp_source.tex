@@ -1,0 +1,55 @@
+\hypertarget{_client_8hpp_source}{}\doxysection{Client.\+hpp}
+\label{_client_8hpp_source}\index{include/client/Client.hpp@{include/client/Client.hpp}}
+\mbox{\hyperlink{_client_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** B-\/CPP-\/500-\/MAR-\/5-\/1-\/rtype-\/theo.garnier-\/test-\/ecs}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Client}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../game/Menu.hpp"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../game/Lobby.hpp"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../game/Macro.hpp"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <boost/asio.hpp>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../server/serialize.hpp"{}}}
+\DoxyCodeLine{21 \textcolor{keyword}{using }boost::asio::ip::udp;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifndef CLIENT\_HPP\_}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define CLIENT\_HPP\_}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{32 \textcolor{keyword}{class }\mbox{\hyperlink{class_client}{Client}} \{}
+\DoxyCodeLine{33     \textcolor{keyword}{public}:}
+\DoxyCodeLine{43         \mbox{\hyperlink{class_client}{Client}}(boost::asio::io\_context\& io\_context, \textcolor{keywordtype}{char} *ip, \textcolor{keywordtype}{short} port);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{51         \mbox{\hyperlink{class_client_a840e519ca781888cbd54181572ebe3a7}{\string~Client}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{59         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_af0ac45090920145015717a91111303fc}{do\_receive}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_a5a07615e690214e63dbb5ca6244ad1f5}{Client\_in\_action}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{74         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_a1d2c29be072bc0fcfab939e2d824cb58}{Client\_send}}(\textcolor{keywordtype}{void} *sended\_info, \textcolor{keywordtype}{size\_t} size);}
+\DoxyCodeLine{75         \mbox{\hyperlink{classser}{ser}} \_serializer;}
+\DoxyCodeLine{76     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{77     \mbox{\hyperlink{class_menu}{Menu}} *Menu\_client;}
+\DoxyCodeLine{78     \mbox{\hyperlink{class_lobby___client}{Lobby\_Client}} *Lobby\_client;}
+\DoxyCodeLine{79     \mbox{\hyperlink{class_room__client}{Room\_client}} *Room\_ig;}
+\DoxyCodeLine{80     \mbox{\hyperlink{structs___client}{s\_Client}} COUPLE;}
+\DoxyCodeLine{81     \textcolor{keywordtype}{int} check\_load;}
+\DoxyCodeLine{82     \textcolor{keywordtype}{int} check\_ig;}
+\DoxyCodeLine{83     boost::asio::io\_context io\_context;}
+\DoxyCodeLine{84     udp::endpoint sender\_endpoint;}
+\DoxyCodeLine{85     udp::socket \_s;}
+\DoxyCodeLine{86     \textcolor{keywordtype}{int} client\_state;}
+\DoxyCodeLine{87     int16\_t receive\_buffer[600];}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} *send\_buffer;}
+\DoxyCodeLine{89     udp::resolver::results\_type endpoints;}
+\DoxyCodeLine{90     \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\_GENERIC}} real\_infos;}
+\DoxyCodeLine{91     \textcolor{comment}{//int client\_state;}}
+\DoxyCodeLine{92     \textcolor{keyword}{private}:}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !CLIENT\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,299 @@
+CONFIG:
+
+//SHOOT = BULLET'S SENDER
+//COMPOSED = MULTI-ENTITY ENEMY
+
+__PLAYER__
+1:1
+STRUCT:
+    TYPE=1
+    UNDERTYPE=1
+    HEALTH=100
+    DAMAGE=1
+    MAX_FRAME=7
+    WIDTH=90
+    HEIGHT=90
+    ASSET="assets/sprites/starship.png"
+SCRIPT:
+
+__ENEMIES__
+2:1
+STRUCT:
+    TYPE=2
+    UNDERTYPE=1
+    HEALTH=100
+    DAMAGE=1
+    MAX_FRAME=5
+    WIDTH=90
+    HEIGHT=90
+    ASSET="assets/sprites/enemy1.png"
+SCRIPT:
+
+2:2
+STRUCT:
+    TYPE=2
+    UNDERTYPE=2
+    HEALTH=150
+    DAMAGE=2
+    MAX_FRAME=5
+    WIDTH=90
+    HEIGHT=90
+    ASSET="assets/sprites/enemy2.png"
+SCRIPT:
+    SHOOT
+
+2:3
+STRUCT:
+    TYPE=2
+    UNDERTYPE=3
+    HEALTH=350
+    DAMAGE=2
+    MAX_FRAME=1
+    WIDTH=90
+    HEIGHT=90
+    ASSET="assets/sprites/snake_head.png"
+SCRIPT:
+    COMPOSED
+
+2:4
+STRUCT:
+    TYPE=2
+    UNDERTYPE=3
+    HEALTH=350
+    DAMAGE=2
+    MAX_FRAME=1
+    WIDTH=90
+    HEIGHT=90
+    ASSET="assets/sprites/snake_part.png"
+
+__BONUS__
+3:1
+STRUCT:
+    TYPE=3
+    UNDERTYPE=1
+    HEALTH=50
+    DAMAGE=1
+    MAX_FRAME=4
+    WIDTH=52
+    HEIGHT=60
+    ASSET="assets/sprites/bonus5.png"
+SCRIPT:
+    
+3:2
+STRUCT:
+    TYPE=3
+    UNDERTYPE=2
+    HEALTH=50
+    DAMAGE=2
+    MAX_FRAME=4
+    WIDTH=52
+    HEIGHT=60
+    ASSET="assets/sprites/bonus4.png"
+SCRIPT:
+
+3:3
+STRUCT:
+    TYPE=3
+    UNDERTYPE=3
+    HEALTH=50
+    DAMAGE=2
+    MAX_FRAME=4
+    WIDTH=52
+    HEIGHT=60
+    ASSET="assets/sprites/bonus3.png"
+SCRIPT:
+
+3:4
+STRUCT:
+    TYPE=3
+    UNDERTYPE=4
+    HEALTH=50
+    DAMAGE=1
+    MAX_FRAME=4
+    WIDTH=52
+    HEIGHT=60
+    ASSET="assets/sprites/bonus1.png"
+SCRIPT:
+
+3:5
+STRUCT:
+    TYPE=3
+    UNDERTYPE=5
+    HEALTH=50
+    DAMAGE=1
+    MAX_FRAME=4
+    WIDTH=52
+    HEIGHT=60
+    ASSET="assets/sprites/bonus2.png"
+SCRIPT:
+
+
+__BULLET__
+4:1
+STRUCT:
+    TYPE=4
+    UNDERTYPE=1
+    HEALTH=50
+    DAMAGE=1
+    MAX_FRAME=5
+    WIDTH=32
+    HEIGHT=10
+    ASSET="assets/sprites/bullet.png"
+SCRIPT:
+
+4:2
+STRUCT:
+    TYPE=4
+    UNDERTYPE=2
+    HEALTH=50
+    DAMAGE=2
+    MAX_FRAME=5
+    WIDTH=32
+    HEIGHT=10
+    ASSET="assets/sprites/rocket.png"
+
+4:3
+STRUCT:
+    TYPE=4
+    UNDERTYPE=3
+    HEALTH=50
+    DAMAGE=10
+    MAX_FRAME=1
+    WIDTH=1920
+    HEIGHT=20
+    ASSET="assets/sprites/laserd.png"
+
+4:4
+STRUCT:
+    TYPE=4
+    UNDERTYPE=4
+    HEALTH=50
+    DAMAGE=10
+    MAX_FRAME=2
+    WIDTH=36
+    HEIGHT=50
+    ASSET="assets/sprites/bouncing.png"
+
+__BLOC__
+5:1
+STRUCT:
+    TYPE=5
+    UNDERTYPE=1
+    HEALTH=0
+    DAMAGE=1
+    MAX_FRAME=1
+    WIDTH=90
+    HEIGHT=90
+    ASSET="assets/sprites/Bedrock_block.png"
+SCRIPT:
+    
+5:2
+STRUCT:
+    TYPE=5
+    UNDERTYPE=1
+    HEALTH=0
+    DAMAGE=1
+    MAX_FRAME=1
+    WIDTH=90
+    HEIGHT=90
+    ASSET="assets/sprites/Bedrock_block.png"
+SCRIPT:
+    
+5:3
+STRUCT:
+    TYPE=5
+    UNDERTYPE=1
+    HEALTH=0
+    DAMAGE=1
+    MAX_FRAME=1
+    WIDTH=90
+    HEIGHT=90
+    ASSET="..."
+SCRIPT:
+    
+5:4
+STRUCT:
+    TYPE=5
+    UNDERTYPE=1
+    HEALTH=0
+    DAMAGE=1
+    MAX_FRAME=1
+    WIDTH=90
+    HEIGHT=90
+    ASSET="..."
+SCRIPT:
+    
+__BOSS__
+6:1
+STRUCT:
+    TYPE=6
+    UNDERTYPE=1
+    HEALTH=700
+    DAMAGE=3
+    MAX_FRAME=3
+    WIDTH=82
+    HEIGHT=102
+    ASSET="assets/sprites/boss_head.png"
+SCRIPT:
+    COMPOSED
+
+6:2
+STRUCT:
+    TYPE=6
+    UNDERTYPE=2
+    HEALTH=100
+    DAMAGE=2
+    MAX_FRAME=1
+    WIDTH=62
+    HEIGHT=40
+    ASSET="assets/sprites/boss_part.png"
+
+6:3
+STRUCT:
+    TYPE=6
+    UNDERTYPE=3
+    HEALTH=600
+    DAMAGE=2
+    MAX_FRAME=3
+    WIDTH=168
+    HEIGHT=178
+    ASSET="assets/sprites/Sol.png"
+
+6:4
+STRUCT:
+    TYPE=6
+    UNDERTYPE=3
+    HEALTH=300
+    DAMAGE=2
+    MAX_FRAME=3
+    WIDTH=168
+    HEIGHT=178
+    ASSET="assets/sprites/Luna.png"
+
+6:5
+STRUCT:
+    TYPE=6
+    UNDERTYPE=5
+    HEALTH=600
+    DAMAGE=2
+    MAX_FRAME=3
+    WIDTH=540
+    HEIGHT=180
+    ASSET="assets/sprites/Bigsnake_head.png"
+
+6:6
+STRUCT:
+    TYPE=6
+    UNDERTYPE=6
+    HEALTH=300
+    DAMAGE=2
+    MAX_FRAME=3
+    WIDTH=540
+    HEIGHT=180
+    ASSET="assets/sprites/BigSnake_part.png"
+
+CINEMATIC SYSTEM
+7:1
+STRUCT
+    END
+

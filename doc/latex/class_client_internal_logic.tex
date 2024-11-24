@@ -1,0 +1,129 @@
+\hypertarget{class_client_internal_logic}{}\doxysection{Client\+Internal\+Logic Class Reference}
+\label{class_client_internal_logic}\index{ClientInternalLogic@{ClientInternalLogic}}
+
+
+classe of \mbox{\hyperlink{class_client_internal_logic}{Client\+Internal\+Logic}}  
+
+
+
+
+{\ttfamily \#include $<$Client\+Internal\+Logic.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_client_internal_logic_a1d6198a745bd2e5cc1816213019ea13e}{Client\+Internal\+Logic}} (std\+::vector$<$ s\+\_\+\+Entity $>$ Original\+\_\+\+RAM, int new\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_client_internal_logic_ad1ca150f316dcf462de65439d688916b}{$\sim$\+Client\+Internal\+Logic}} ()
+\begin{DoxyCompactList}\small\item\em Destructorr. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_client_internal_logic_a49c0d9cd61762d3b2b151cde1779ea14}{Client\+\_\+\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Display data of client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_client_internal_logic_a67d8028cf60c1e84b05ee776b6018868}{Verify\+\_\+\+Cache}} (std\+::vector$<$ s\+\_\+\+Entity $>$ Original\+\_\+\+RAM)
+\begin{DoxyCompactList}\small\item\em verify cache \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\+\_\+\+GENERIC}} \mbox{\hyperlink{class_client_internal_logic_a7f3acd6cf2ef53ba25a9cd3f7f740b00}{get\+Infos}} ()
+\begin{DoxyCompactList}\small\item\em get infos \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_client_internal_logic_a2e2a795f2ae527a59cf3157a93931054}\label{class_client_internal_logic_a2e2a795f2ae527a59cf3157a93931054}} 
+int {\bfseries id}
+\item 
+\mbox{\Hypertarget{class_client_internal_logic_a145d6302ba64756399bfd71a6befa4f1}\label{class_client_internal_logic_a145d6302ba64756399bfd71a6befa4f1}} 
+\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\+\_\+\+GENERIC}} {\bfseries SENDED\+\_\+\+INFOS}
+\item 
+\mbox{\Hypertarget{class_client_internal_logic_a664f40ecac32be207c89cb999e867329}\label{class_client_internal_logic_a664f40ecac32be207c89cb999e867329}} 
+\mbox{\hyperlink{class_systems_1_1_rendering_system}{Systems\+::\+Rendering\+System}} {\bfseries Render\+Sys}
+\item 
+\mbox{\Hypertarget{class_client_internal_logic_abd3881fa5ce1a13d0e2b4f6c55336c46}\label{class_client_internal_logic_abd3881fa5ce1a13d0e2b4f6c55336c46}} 
+std\+::vector$<$ s\+\_\+\+Entity $>$ {\bfseries DATABASE}
+\item 
+\mbox{\Hypertarget{class_client_internal_logic_a67c14ae1248a875206a18439046a57ef}\label{class_client_internal_logic_a67c14ae1248a875206a18439046a57ef}} 
+std\+::vector$<$ s\+\_\+\+Entity $>$ {\bfseries CACHE}
+\item 
+\mbox{\Hypertarget{class_client_internal_logic_a3754296de6e54406e826127324569242}\label{class_client_internal_logic_a3754296de6e54406e826127324569242}} 
+std\+::vector$<$ s\+\_\+\+Entity $>$ {\bfseries Display\+\_\+on\+\_\+screen}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+classe of \mbox{\hyperlink{class_client_internal_logic}{Client\+Internal\+Logic}} 
+
+class handle data of client 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_client_internal_logic_a1d6198a745bd2e5cc1816213019ea13e}\label{class_client_internal_logic_a1d6198a745bd2e5cc1816213019ea13e}} 
+\index{ClientInternalLogic@{ClientInternalLogic}!ClientInternalLogic@{ClientInternalLogic}}
+\index{ClientInternalLogic@{ClientInternalLogic}!ClientInternalLogic@{ClientInternalLogic}}
+\doxysubsubsection{\texorpdfstring{ClientInternalLogic()}{ClientInternalLogic()}}
+{\footnotesize\ttfamily Client\+Internal\+Logic\+::\+Client\+Internal\+Logic (\begin{DoxyParamCaption}\item[{std\+::vector$<$ s\+\_\+\+Entity $>$}]{Original\+\_\+\+RAM,  }\item[{int}]{new\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructorr of class \mbox{\hyperlink{class_client_internal_logic}{Client\+Internal\+Logic}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Original\+\_\+\+RAM} & \+: contain all entity send by the server that need to be handle \\
+\hline
+{\em new\+\_\+id} & \+: id of the data send \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_client_internal_logic_ad1ca150f316dcf462de65439d688916b}\label{class_client_internal_logic_ad1ca150f316dcf462de65439d688916b}} 
+\index{ClientInternalLogic@{ClientInternalLogic}!````~ClientInternalLogic@{$\sim$ClientInternalLogic}}
+\index{````~ClientInternalLogic@{$\sim$ClientInternalLogic}!ClientInternalLogic@{ClientInternalLogic}}
+\doxysubsubsection{\texorpdfstring{$\sim$ClientInternalLogic()}{~ClientInternalLogic()}}
+{\footnotesize\ttfamily Client\+Internal\+Logic\+::$\sim$\+Client\+Internal\+Logic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructorr. 
+
+Destructorr of class \mbox{\hyperlink{class_client_internal_logic}{Client\+Internal\+Logic}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_client_internal_logic_a49c0d9cd61762d3b2b151cde1779ea14}\label{class_client_internal_logic_a49c0d9cd61762d3b2b151cde1779ea14}} 
+\index{ClientInternalLogic@{ClientInternalLogic}!Client\_Display@{Client\_Display}}
+\index{Client\_Display@{Client\_Display}!ClientInternalLogic@{ClientInternalLogic}}
+\doxysubsubsection{\texorpdfstring{Client\_Display()}{Client\_Display()}}
+{\footnotesize\ttfamily void Client\+Internal\+Logic\+::\+Client\+\_\+\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Display data of client. 
+
+Display different think like game etc \mbox{\Hypertarget{class_client_internal_logic_a7f3acd6cf2ef53ba25a9cd3f7f740b00}\label{class_client_internal_logic_a7f3acd6cf2ef53ba25a9cd3f7f740b00}} 
+\index{ClientInternalLogic@{ClientInternalLogic}!getInfos@{getInfos}}
+\index{getInfos@{getInfos}!ClientInternalLogic@{ClientInternalLogic}}
+\doxysubsubsection{\texorpdfstring{getInfos()}{getInfos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\+\_\+\+GENERIC}} Client\+Internal\+Logic\+::get\+Infos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get infos 
+
+Get the info of the client \begin{DoxyReturn}{Returns}
+return struct \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\+\_\+\+GENERIC}} that contain all data of client 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_client_internal_logic_a67d8028cf60c1e84b05ee776b6018868}\label{class_client_internal_logic_a67d8028cf60c1e84b05ee776b6018868}} 
+\index{ClientInternalLogic@{ClientInternalLogic}!Verify\_Cache@{Verify\_Cache}}
+\index{Verify\_Cache@{Verify\_Cache}!ClientInternalLogic@{ClientInternalLogic}}
+\doxysubsubsection{\texorpdfstring{Verify\_Cache()}{Verify\_Cache()}}
+{\footnotesize\ttfamily void Client\+Internal\+Logic\+::\+Verify\+\_\+\+Cache (\begin{DoxyParamCaption}\item[{std\+::vector$<$ s\+\_\+\+Entity $>$}]{Original\+\_\+\+RAM }\end{DoxyParamCaption})}
+
+
+
+verify cache 
+
+Verify cache send by server 
+\begin{DoxyParams}{Parameters}
+{\em Original\+\_\+\+RAM} & \+: ram send by server untouched \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/client/\mbox{\hyperlink{_client_internal_logic_8hpp}{Client\+Internal\+Logic.\+hpp}}\item 
+src/client/\mbox{\hyperlink{_client_internal_logic_8cpp}{Client\+Internal\+Logic.\+cpp}}\end{DoxyCompactItemize}

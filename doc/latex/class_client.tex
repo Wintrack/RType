@@ -1,0 +1,144 @@
+\hypertarget{class_client}{}\doxysection{Client Class Reference}
+\label{class_client}\index{Client@{Client}}
+
+
+classe of \mbox{\hyperlink{class_client}{Client}}  
+
+
+
+
+{\ttfamily \#include $<$Client.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_client_a52fdee08bbb26ac9df241453bf86b6c8}{Client}} (boost\+::asio\+::io\+\_\+context \&io\+\_\+context, char $\ast$ip, short port)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_client_a840e519ca781888cbd54181572ebe3a7}{$\sim$\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_client_af0ac45090920145015717a91111303fc}{do\+\_\+receive}} ()
+\begin{DoxyCompactList}\small\item\em receive data of server \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_client_a5a07615e690214e63dbb5ca6244ad1f5}\label{class_client_a5a07615e690214e63dbb5ca6244ad1f5}} 
+void {\bfseries Client\+\_\+in\+\_\+action} ()
+\begin{DoxyCompactList}\small\item\em User interaction Define the action to do depending of the user interaction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_client_a1d2c29be072bc0fcfab939e2d824cb58}{Client\+\_\+send}} (void $\ast$sended\+\_\+info, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Send data to server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_client_a7490113c6f2253a46a7dbf548683d3d6}\label{class_client_a7490113c6f2253a46a7dbf548683d3d6}} 
+\mbox{\hyperlink{classser}{ser}} {\bfseries \+\_\+serializer}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_client_a44cc95cd08c063bea0202b72d6c1829a}\label{class_client_a44cc95cd08c063bea0202b72d6c1829a}} 
+\mbox{\hyperlink{class_menu}{Menu}} $\ast$ {\bfseries Menu\+\_\+client}
+\item 
+\mbox{\Hypertarget{class_client_a9e3905ec9e71523796329300204abf6d}\label{class_client_a9e3905ec9e71523796329300204abf6d}} 
+\mbox{\hyperlink{class_lobby___client}{Lobby\+\_\+\+Client}} $\ast$ {\bfseries Lobby\+\_\+client}
+\item 
+\mbox{\Hypertarget{class_client_a184fea48f9116d5bf7a149cea149e344}\label{class_client_a184fea48f9116d5bf7a149cea149e344}} 
+\mbox{\hyperlink{class_room__client}{Room\+\_\+client}} $\ast$ {\bfseries Room\+\_\+ig}
+\item 
+\mbox{\Hypertarget{class_client_aca85a9d66d7966e9c9a447aaadc79a52}\label{class_client_aca85a9d66d7966e9c9a447aaadc79a52}} 
+\mbox{\hyperlink{structs___client}{s\+\_\+\+Client}} {\bfseries COUPLE}
+\item 
+\mbox{\Hypertarget{class_client_a30df047599413a4d2d73ae77b4ac3bd3}\label{class_client_a30df047599413a4d2d73ae77b4ac3bd3}} 
+int {\bfseries check\+\_\+load}
+\item 
+\mbox{\Hypertarget{class_client_aafab3d3742a8085093838c6ff33cfa38}\label{class_client_aafab3d3742a8085093838c6ff33cfa38}} 
+int {\bfseries check\+\_\+ig}
+\item 
+\mbox{\Hypertarget{class_client_a4488b6e3f445483469de902e46cdc383}\label{class_client_a4488b6e3f445483469de902e46cdc383}} 
+boost\+::asio\+::io\+\_\+context {\bfseries io\+\_\+context}
+\item 
+\mbox{\Hypertarget{class_client_aee04c3f1f53d620e8ccd57335f804a8e}\label{class_client_aee04c3f1f53d620e8ccd57335f804a8e}} 
+udp\+::endpoint {\bfseries sender\+\_\+endpoint}
+\item 
+\mbox{\Hypertarget{class_client_a9d5405a2cfccbeeae6f83423154e4097}\label{class_client_a9d5405a2cfccbeeae6f83423154e4097}} 
+udp\+::socket {\bfseries \+\_\+s}
+\item 
+\mbox{\Hypertarget{class_client_a7a29edb27f14dc2aa1a1ea0ae6b9d9a9}\label{class_client_a7a29edb27f14dc2aa1a1ea0ae6b9d9a9}} 
+int {\bfseries client\+\_\+state}
+\item 
+\mbox{\Hypertarget{class_client_a7492c72d1fa7acf49b27f1700be5ff3e}\label{class_client_a7492c72d1fa7acf49b27f1700be5ff3e}} 
+int16\+\_\+t {\bfseries receive\+\_\+buffer} \mbox{[}600\mbox{]}
+\item 
+\mbox{\Hypertarget{class_client_a7a1f0ad887f25d25aa7658e132cab36f}\label{class_client_a7a1f0ad887f25d25aa7658e132cab36f}} 
+void $\ast$ {\bfseries send\+\_\+buffer}
+\item 
+\mbox{\Hypertarget{class_client_a2d64f8e5779a8ae2338f507da759e6ec}\label{class_client_a2d64f8e5779a8ae2338f507da759e6ec}} 
+udp\+::resolver\+::results\+\_\+type {\bfseries endpoints}
+\item 
+\mbox{\Hypertarget{class_client_a3eafac69ba5f531a5f6d1626ed22d69e}\label{class_client_a3eafac69ba5f531a5f6d1626ed22d69e}} 
+\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\+\_\+\+GENERIC}} {\bfseries real\+\_\+infos}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+classe of \mbox{\hyperlink{class_client}{Client}} 
+
+The class handle client in is globality 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_client_a52fdee08bbb26ac9df241453bf86b6c8}\label{class_client_a52fdee08bbb26ac9df241453bf86b6c8}} 
+\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily Client\+::\+Client (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+context \&}]{io\+\_\+context,  }\item[{char $\ast$}]{ip,  }\item[{short}]{port }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructorr of class client
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+\_\+context} & \+: io\+\_\+context client see doc boost/asio \\
+\hline
+{\em ip} & \+: ip of server where client need to connect \\
+\hline
+{\em port} & \+: port of server where client need to connect \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_client_a840e519ca781888cbd54181572ebe3a7}\label{class_client_a840e519ca781888cbd54181572ebe3a7}} 
+\index{Client@{Client}!````~Client@{$\sim$Client}}
+\index{````~Client@{$\sim$Client}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{$\sim$Client()}{~Client()}}
+{\footnotesize\ttfamily Client\+::$\sim$\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Destructor of class \mbox{\hyperlink{class_client}{Client}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_client_a1d2c29be072bc0fcfab939e2d824cb58}\label{class_client_a1d2c29be072bc0fcfab939e2d824cb58}} 
+\index{Client@{Client}!Client\_send@{Client\_send}}
+\index{Client\_send@{Client\_send}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{Client\_send()}{Client\_send()}}
+{\footnotesize\ttfamily void Client\+::\+Client\+\_\+send (\begin{DoxyParamCaption}\item[{void $\ast$}]{sended\+\_\+info,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Send data to server. 
+
+\mbox{\hyperlink{class_client}{Client}} send data to server here \mbox{\Hypertarget{class_client_af0ac45090920145015717a91111303fc}\label{class_client_af0ac45090920145015717a91111303fc}} 
+\index{Client@{Client}!do\_receive@{do\_receive}}
+\index{do\_receive@{do\_receive}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{do\_receive()}{do\_receive()}}
+{\footnotesize\ttfamily void Client\+::do\+\_\+receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+receive data of server 
+
+Handle the reception of data send by server 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/client/\mbox{\hyperlink{_client_8hpp}{Client.\+hpp}}\item 
+src/client/\mbox{\hyperlink{client_2main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

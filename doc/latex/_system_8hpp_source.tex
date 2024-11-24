@@ -1,0 +1,137 @@
+\hypertarget{_system_8hpp_source}{}\doxysection{System.\+hpp}
+\label{_system_8hpp_source}\index{include/server/System.hpp@{include/server/System.hpp}}
+\mbox{\hyperlink{_system_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** TEK3}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** System}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_entity_8hpp}{Entity.hpp}}"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef SYSTEM\_HPP\_}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define SYSTEM\_HPP\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}fire.hpp"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{29 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_entity__to__display}{Entity\_to\_display}}\{}
+\DoxyCodeLine{30     Texture2D texture;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{39 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_systems}{Systems}}\{}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{47     \textcolor{keyword}{class }\mbox{\hyperlink{class_systems_1_1_movement_system}{MovementSystem}} \{}
+\DoxyCodeLine{48         \textcolor{keyword}{public}:}
+\DoxyCodeLine{49             \mbox{\hyperlink{class_systems_1_1_movement_system}{MovementSystem}}();}
+\DoxyCodeLine{50             \mbox{\hyperlink{class_systems_1_1_movement_system}{\string~MovementSystem}}();}
+\DoxyCodeLine{51             std::vector<iEntity *> World\_Movement\_handler(std::vector<iEntity *> DATABASE, std::vector<s\_Entity>, \textcolor{keywordtype}{int} *id\_generator);}
+\DoxyCodeLine{52             \textcolor{keywordtype}{void} Movement\_AI\_On\_Screen();}
+\DoxyCodeLine{53             \textcolor{keywordtype}{int} lock;}
+\DoxyCodeLine{54             \textcolor{keywordtype}{int} alive;}
+\DoxyCodeLine{55         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{56         \textcolor{keyword}{private}:}
+\DoxyCodeLine{57     \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{65     \textcolor{keyword}{class }\mbox{\hyperlink{class_systems_1_1_collision_system}{CollisionSystem}} \{}
+\DoxyCodeLine{66         \textcolor{keyword}{public}:}
+\DoxyCodeLine{67             \mbox{\hyperlink{class_systems_1_1_collision_system}{CollisionSystem}}();}
+\DoxyCodeLine{68             \mbox{\hyperlink{class_systems_1_1_collision_system}{\string~CollisionSystem}}();}
+\DoxyCodeLine{69             std::vector<std::vector<std::vector<s\_Entity>>> World\_Collision\_handler(std::vector<iEntity *> RAMMED\_DATABASE);}
+\DoxyCodeLine{70             std::vector<std::vector<int>> Collision\_handler(s\_Entity Target, std::vector<s\_Entity> *RAMMED\_DATABASE);}
+\DoxyCodeLine{71         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{72         \textcolor{keyword}{private}:}
+\DoxyCodeLine{73     \};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 }
+\DoxyCodeLine{82     \textcolor{keyword}{class }\mbox{\hyperlink{class_systems_1_1_frame_system}{FrameSystem}} \{}
+\DoxyCodeLine{83         \textcolor{keyword}{public}:}
+\DoxyCodeLine{84             \mbox{\hyperlink{class_systems_1_1_frame_system}{FrameSystem}}();}
+\DoxyCodeLine{85             \mbox{\hyperlink{class_systems_1_1_frame_system}{\string~FrameSystem}}();}
+\DoxyCodeLine{86             std::vector<iEntity *> World\_Frame\_handler(std::vector<iEntity *> DATABASE);}
+\DoxyCodeLine{87         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{88         \textcolor{keyword}{private}:}
+\DoxyCodeLine{89             \textcolor{keywordtype}{int} count;}
+\DoxyCodeLine{90             \textcolor{keywordtype}{int} value;}
+\DoxyCodeLine{91     \};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{99     \textcolor{keyword}{class }\mbox{\hyperlink{class_systems_1_1_camera_system}{CameraSystem}} \{ \textcolor{comment}{//pour la scénerie 2nd temps}}
+\DoxyCodeLine{100         \textcolor{keyword}{public}:}
+\DoxyCodeLine{101             \mbox{\hyperlink{class_systems_1_1_camera_system}{CameraSystem}}();}
+\DoxyCodeLine{102             \mbox{\hyperlink{class_systems_1_1_camera_system}{\string~CameraSystem}}();}
+\DoxyCodeLine{103             \textcolor{keywordtype}{int} Camera\_handler();}
+\DoxyCodeLine{104     \};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{112     \textcolor{keyword}{class }\mbox{\hyperlink{class_systems_1_1_r_a_m___m_e_m_o_r_y___system}{RAM\_MEMORY\_System}} \{ \textcolor{comment}{// truc qui gère ce qui est envoyé au cache du jeu, ce qui est à l'écran}}
+\DoxyCodeLine{113         \textcolor{keyword}{public}:}
+\DoxyCodeLine{114             \mbox{\hyperlink{class_systems_1_1_r_a_m___m_e_m_o_r_y___system}{RAM\_MEMORY\_System}}();}
+\DoxyCodeLine{115             \mbox{\hyperlink{class_systems_1_1_r_a_m___m_e_m_o_r_y___system}{\string~RAM\_MEMORY\_System}}();}
+\DoxyCodeLine{116             std::vector<s\_Entity> RAM\_handler(std::vector<iEntity *> DATABASE);}
+\DoxyCodeLine{117     \};}
+\DoxyCodeLine{123     \textcolor{keyword}{class }\mbox{\hyperlink{class_systems_1_1_health_system}{HealthSystem}} \{}
+\DoxyCodeLine{124         \textcolor{keyword}{public}:}
+\DoxyCodeLine{125             \mbox{\hyperlink{class_systems_1_1_health_system}{HealthSystem}}();}
+\DoxyCodeLine{126             \mbox{\hyperlink{class_systems_1_1_health_system}{\string~HealthSystem}}();}
+\DoxyCodeLine{127             std::vector<s\_Entity> World\_Health\_handler(std::vector<std::vector<std::vector<s\_Entity>>>);}
+\DoxyCodeLine{128             std::vector<s\_Entity> Health\_handler(std::vector<std::vector<std::vector<s\_Entity>>>);}
+\DoxyCodeLine{129             \textcolor{keywordtype}{int} health\_barre(\textcolor{keywordtype}{int} health, \textcolor{keywordtype}{int} pos\_x, \textcolor{keywordtype}{int} pos\_y);}
+\DoxyCodeLine{130         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{131         \textcolor{keyword}{private}:}
+\DoxyCodeLine{132     \};}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{141     \textcolor{keyword}{class }\mbox{\hyperlink{class_systems_1_1_living_system}{LivingSystem}} \{}
+\DoxyCodeLine{142         \textcolor{keyword}{public}:}
+\DoxyCodeLine{143             \mbox{\hyperlink{class_systems_1_1_living_system}{LivingSystem}}();}
+\DoxyCodeLine{144             \mbox{\hyperlink{class_systems_1_1_living_system}{\string~LivingSystem}}();}
+\DoxyCodeLine{145             std::vector<iEntity *> Living\_handler(std::vector<iEntity *>);}
+\DoxyCodeLine{146         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{147         \textcolor{keyword}{private}:}
+\DoxyCodeLine{148     \};}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 }
+\DoxyCodeLine{157     \textcolor{keyword}{class }\mbox{\hyperlink{class_systems_1_1_audio_system}{AudioSystem}} \{}
+\DoxyCodeLine{158         \textcolor{keyword}{public}:}
+\DoxyCodeLine{159             \mbox{\hyperlink{class_systems_1_1_audio_system}{AudioSystem}}();}
+\DoxyCodeLine{160             \mbox{\hyperlink{class_systems_1_1_audio_system}{\string~AudioSystem}}();}
+\DoxyCodeLine{161             std::vector<float> Audio\_handler(\textcolor{keyword}{struct} s\_Entity);}
+\DoxyCodeLine{162         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{163         \textcolor{keyword}{private}:}
+\DoxyCodeLine{164     \};}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{172     \textcolor{keyword}{class }\mbox{\hyperlink{class_systems_1_1_rendering_system}{RenderingSystem}} \{}
+\DoxyCodeLine{173         \textcolor{keyword}{public}:}
+\DoxyCodeLine{174             \mbox{\hyperlink{class_systems_1_1_rendering_system}{RenderingSystem}}();}
+\DoxyCodeLine{175             \mbox{\hyperlink{class_systems_1_1_rendering_system}{\string~RenderingSystem}}();}
+\DoxyCodeLine{176             \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\_GENERIC}} Rendering\_handler(std::vector<s\_Entity> displayed, \textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{177         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{178         \textcolor{keyword}{private}:}
+\DoxyCodeLine{179             \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\_GENERIC}} SENDED\_INFO;}
+\DoxyCodeLine{180             \textcolor{keywordtype}{int} screenWidth;}
+\DoxyCodeLine{181             \textcolor{keywordtype}{int} screenHeight;}
+\DoxyCodeLine{182             \textcolor{keywordtype}{int} isHitted;}
+\DoxyCodeLine{183             Texture2D starship;}
+\DoxyCodeLine{184             Texture2D ennemy;}
+\DoxyCodeLine{185             Texture background;}
+\DoxyCodeLine{186             Vector2 ennemyPosition;}
+\DoxyCodeLine{187             Vector2 starshipPosition;}
+\DoxyCodeLine{188             std::vector<Entity\_to\_display> Texture\_starship;}
+\DoxyCodeLine{189             std::vector<Entity\_to\_display> Texture\_ennemy;}
+\DoxyCodeLine{190             std::vector<Entity\_to\_display> Texture\_bg;}
+\DoxyCodeLine{191             std::vector<Entity\_to\_display> Texture\_bullet;}
+\DoxyCodeLine{192             std::vector<Entity\_to\_display> Texture\_block;}
+\DoxyCodeLine{193             \mbox{\hyperlink{classfire}{fire}} *bullet;}
+\DoxyCodeLine{194             Vector2 offset;}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197             Vector2 \_pos\_bullet;}
+\DoxyCodeLine{198             Vector2 \_pos\_ship;}
+\DoxyCodeLine{199             Rectangle \_frameRecShip;}
+\DoxyCodeLine{200             Rectangle \_freameRecBullet;}
+\DoxyCodeLine{201     \};}
+\DoxyCodeLine{202 \}}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !SYSTEM\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

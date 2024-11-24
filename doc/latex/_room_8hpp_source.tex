@@ -1,0 +1,52 @@
+\hypertarget{_room_8hpp_source}{}\doxysection{Room.\+hpp}
+\label{_room_8hpp_source}\index{include/server/Room.hpp@{include/server/Room.hpp}}
+\mbox{\hyperlink{_room_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** B-\/CPP-\/500-\/MAR-\/5-\/1-\/rtype-\/theo.garnier-\/test-\/ecs}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Room}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_server_internal_logic_8hpp}{ServerInternalLogic.hpp}}"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_client_internal_logic_8hpp}{ClientInternalLogic.hpp}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <boost/asio.hpp>}}
+\DoxyCodeLine{21 \textcolor{keyword}{using }boost::asio::ip::udp;}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifndef ROOM\_HPP\_}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define ROOM\_HPP\_}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{32 \textcolor{keyword}{class }\mbox{\hyperlink{class_room__server}{Room\_server}} \{}
+\DoxyCodeLine{33     \textcolor{keyword}{public}:}
+\DoxyCodeLine{44         \mbox{\hyperlink{class_room__server}{Room\_server}}(std::string name, \textcolor{keywordtype}{int} max\_players);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{53         \mbox{\hyperlink{class_room__server_aaf011bb8a63e64e4c22d4640bd3a3580}{\string~Room\_server}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{63         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room__server_a28ed6536596128f8ad4177187025906c}{Create\_room}}(udp::endpoint \_sender\_endpoint);}
+\DoxyCodeLine{64       }
+\DoxyCodeLine{73         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room__server_ab1e1f2fbfa296ad3ed7ece5ae653716f}{Add\_client}}(udp::endpoint \_sender\_endpoint);}
+\DoxyCodeLine{74        }
+\DoxyCodeLine{83         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room__server_a115dc7952e5484fc1094135fd71485aa}{Treating\_Game\_Loop}}(\textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} pos\_x, \textcolor{keywordtype}{int} pos\_y, \textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{84         std::vector<udp::endpoint> clients\_in\_game;}
+\DoxyCodeLine{85         std::string room\_name;}
+\DoxyCodeLine{86         int16\_t max\_players;}
+\DoxyCodeLine{87         \mbox{\hyperlink{class_server_internal_logic}{ServerInternalLogic}} *Game;}
+\DoxyCodeLine{88     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{89     \textcolor{keyword}{private}:}
+\DoxyCodeLine{90 \};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{98 \textcolor{keyword}{class }\mbox{\hyperlink{class_room__client}{Room\_client}} \{}
+\DoxyCodeLine{99     \textcolor{keyword}{public}:}
+\DoxyCodeLine{100         \mbox{\hyperlink{class_room__client}{Room\_client}}(std::vector<s\_Entity> Original\_RAM, \textcolor{keywordtype}{int} \textcolor{keywordtype}{id}); \textcolor{comment}{//créer le cache etc...;}}
+\DoxyCodeLine{101         \mbox{\hyperlink{class_room__client}{\string~Room\_client}}();}
+\DoxyCodeLine{102         \textcolor{keywordtype}{void} Room\_read\_from\_server(std::vector<s\_Entity> New\_RAM); \textcolor{comment}{// avec verif cache}}
+\DoxyCodeLine{103         \mbox{\hyperlink{class_client_internal_logic}{ClientInternalLogic}} *Renders;}
+\DoxyCodeLine{104     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{105     \textcolor{keyword}{private}:}
+\DoxyCodeLine{106 \};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !ROOM\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

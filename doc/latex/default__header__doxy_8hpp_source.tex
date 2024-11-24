@@ -1,0 +1,38 @@
+\hypertarget{default__header__doxy_8hpp_source}{}\doxysection{default\+\_\+header\+\_\+doxy.\+hpp}
+\label{default__header__doxy_8hpp_source}\index{doc/doxy/default\_header\_doxy.hpp@{doc/doxy/default\_header\_doxy.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CPLAYER\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CPLAYER\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{18 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceplayer}{player}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{25     \textcolor{keyword}{class }\mbox{\hyperlink{classplayer_1_1_c_player}{CPlayer}}}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27     \textcolor{keyword}{private}:}
+\DoxyCodeLine{28         std::list<string> m\_listSongs;             }
+\DoxyCodeLine{29         std::list<string>::iterator m\_currentSong; }
+\DoxyCodeLine{31     \textcolor{keyword}{public}:}
+\DoxyCodeLine{39         \mbox{\hyperlink{classplayer_1_1_c_player_a91ed2a2a0c4f4aa1ba480b74ed353b51}{CPlayer}}(std::list<string> listSongs);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{46         \textcolor{keyword}{virtual} \mbox{\hyperlink{classplayer_1_1_c_player_a0a50d2f32e2e135ebf26076986bddfb1}{\string~CPlayer}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keyword}{public}:}
+\DoxyCodeLine{59         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classplayer_1_1_c_player_a8be0b27d0749fa87f7b574ace798b135}{add}}(std::string strSong);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66         \textcolor{keywordtype}{void} \mbox{\hyperlink{classplayer_1_1_c_player_a7be95660e801b8dfe22e01451e859fce}{next}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{73         \textcolor{keywordtype}{void} \mbox{\hyperlink{classplayer_1_1_c_player_a6421f061cfe7b72665d15a453555887e}{previous}}();}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{80         \textcolor{keywordtype}{void} \mbox{\hyperlink{classplayer_1_1_c_player_af72054307e459546e3898137d165ebeb}{play}}();}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{87         \textcolor{keywordtype}{void} \mbox{\hyperlink{classplayer_1_1_c_player_ad943ab1e4761fd215c0b51646a02c79a}{stop}}();}
+\DoxyCodeLine{88     \};}
+\DoxyCodeLine{89 \};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

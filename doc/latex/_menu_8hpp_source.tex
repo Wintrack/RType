@@ -1,0 +1,63 @@
+\hypertarget{_menu_8hpp_source}{}\doxysection{Menu.\+hpp}
+\label{_menu_8hpp_source}\index{include/game/Menu.hpp@{include/game/Menu.hpp}}
+\mbox{\hyperlink{_menu_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** B-\/CPP-\/500-\/MAR-\/5-\/1-\/rtype-\/theo.garnier-\/test-\/ecs}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Menu}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef Menu\_}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define Menu\_}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_macro_8hpp}{game/Macro.hpp}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <boost/asio.hpp>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}server/serialize.hpp"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}raylib.h"{}}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{using }boost::asio::ip::udp;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{32 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu}{Menu}}}
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{34 \textcolor{keyword}{private}:}
+\DoxyCodeLine{35     \textcolor{keyword}{public}:}
+\DoxyCodeLine{36         Texture2D Background;}
+\DoxyCodeLine{37         Texture2D exit;}
+\DoxyCodeLine{38         Texture2D options;}
+\DoxyCodeLine{39         Texture2D Create\_room;}
+\DoxyCodeLine{40         Texture2D join\_room;}
+\DoxyCodeLine{41         \textcolor{keywordtype}{int} join\_looby;}
+\DoxyCodeLine{42         \textcolor{keywordtype}{int} already\_checked;}
+\DoxyCodeLine{43         \textcolor{comment}{//class template pour assign une value;}}
+\DoxyCodeLine{44         \textcolor{keywordtype}{float} frameHeightNewgame;}
+\DoxyCodeLine{45         Rectangle sourceRecNewgame;}
+\DoxyCodeLine{46         Rectangle btnBoundsNewgame;}
+\DoxyCodeLine{47         \textcolor{keywordtype}{float} frameHeightOption;}
+\DoxyCodeLine{48         Rectangle sourceRecOption;}
+\DoxyCodeLine{49         Rectangle btnBoundsOption;}
+\DoxyCodeLine{50         \textcolor{keywordtype}{float} frameHeightExit;}
+\DoxyCodeLine{51         Rectangle sourceRecExit;}
+\DoxyCodeLine{52         Rectangle btnBoundsExit;}
+\DoxyCodeLine{53         Vector2 cursor;}
+\DoxyCodeLine{54         \textcolor{keywordtype}{int} btnStateNewgame;}
+\DoxyCodeLine{55         \textcolor{keywordtype}{bool} btnActionNewgame;}
+\DoxyCodeLine{56         \textcolor{keywordtype}{int} btnStateSettings;}
+\DoxyCodeLine{57         \textcolor{keywordtype}{bool} btnActionSettings;}
+\DoxyCodeLine{58         \textcolor{keywordtype}{int} btnStateExit;}
+\DoxyCodeLine{59         \textcolor{keywordtype}{bool} btnActionExit;}
+\DoxyCodeLine{60         \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\_GENERIC}} SENDED\_INFO;}
+\DoxyCodeLine{61         \textcolor{keywordtype}{void} Menu\_page();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{70         \mbox{\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu}}();}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 }
+\DoxyCodeLine{77         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a748c59d87907f1a33285a8ecb89ee261}{Display}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{84         \mbox{\hyperlink{class_menu_a831387f51358cfb88cd018e1777bc980}{\string~Menu}}();}
+\DoxyCodeLine{85 \};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

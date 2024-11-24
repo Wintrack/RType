@@ -1,0 +1,80 @@
+\hypertarget{_lobby_8hpp_source}{}\doxysection{Lobby.\+hpp}
+\label{_lobby_8hpp_source}\index{include/game/Lobby.hpp@{include/game/Lobby.hpp}}
+\mbox{\hyperlink{_lobby_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** B-\/CPP-\/500-\/MAR-\/5-\/1-\/rtype-\/theo.garnier-\/test-\/ecs}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Lobby}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../server/Room.hpp"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_macro_8hpp}{Macro.hpp}}"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}raylib.h"{}}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifndef LOBBY\_HPP\_}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define LOBBY\_HPP\_}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{32 \textcolor{keyword}{class }\mbox{\hyperlink{class_lobby___serv}{Lobby\_Serv}} \{}
+\DoxyCodeLine{33     \textcolor{keyword}{public}:}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{42         \mbox{\hyperlink{class_lobby___serv_a98cb74a11ef2846f2f641f48b7ae4cd6}{Lobby\_Serv}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{49         \mbox{\hyperlink{class_lobby___serv_a8d36bbf09970738f5c3106d66d5a408e}{\string~Lobby\_Serv}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{60         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lobby___serv_a7d23a1fa321ba0bb5f1477a9c166cf0d}{add\_new\_room}}(std::string name, \textcolor{keywordtype}{int} max\_players);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{71         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lobby___serv_abcd3321e3534bd52c7061db3a8a94e98}{join\_room}}(std::string name, \mbox{\hyperlink{structs___client}{s\_Client}} cli);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{81         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lobby___serv_a08ec5453f200ba03ee6bd1ea0e6ee4e3}{destroy\_room}}(std::string name);}
+\DoxyCodeLine{82         std::vector<Room\_server *> rooms\_on\_list;}
+\DoxyCodeLine{83     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{84     \textcolor{keyword}{private}:}
+\DoxyCodeLine{85 \};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{92 \textcolor{keyword}{class }\mbox{\hyperlink{class_lobby___client}{Lobby\_Client}} \{}
+\DoxyCodeLine{93 \textcolor{keyword}{public}:}
+\DoxyCodeLine{94         Texture2D Background;}
+\DoxyCodeLine{95         Texture2D Lobby\_button;}
+\DoxyCodeLine{96         Texture2D Exit;}
+\DoxyCodeLine{97         Texture2D Create\_lobby;}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99         \textcolor{keywordtype}{int} join\_looby;}
+\DoxyCodeLine{100         \textcolor{keywordtype}{int} already\_checked;}
+\DoxyCodeLine{101         \textcolor{keywordtype}{float} frameHeightNewgame;}
+\DoxyCodeLine{102         Rectangle sourceRecNewgame;}
+\DoxyCodeLine{103         Rectangle btnBoundsNewgame;}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105         \textcolor{keywordtype}{float} frameHeightExit;}
+\DoxyCodeLine{106         Rectangle sourceRecExit;}
+\DoxyCodeLine{107         Rectangle btnBoundsExit;}
+\DoxyCodeLine{108         Vector2 cursor;}
+\DoxyCodeLine{109         \textcolor{keywordtype}{int} btnStateNewgame;}
+\DoxyCodeLine{110         \textcolor{keywordtype}{bool} btnActionNewgame;}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112         \textcolor{keywordtype}{int} btnStateExit;}
+\DoxyCodeLine{113         \textcolor{keywordtype}{bool} btnActionExit;}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{122         \mbox{\hyperlink{class_lobby___client}{Lobby\_Client}}(std::vector<std::string> sended\_names, std::vector<int16\_t> players\_by\_map);}
+\DoxyCodeLine{123    }
+\DoxyCodeLine{130         \mbox{\hyperlink{class_lobby___client_a342835ee9c8f5cb4ceaa439618d172fa}{\string~Lobby\_Client}}();}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{139         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lobby___client_a21508987003aa11f2022a5710450a3fc}{Lobby\_page}}();}
+\DoxyCodeLine{147         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lobby___client_a972cd577574db3289b6e874ea79fcb85}{Display}}();}
+\DoxyCodeLine{148         \textcolor{keywordtype}{int} join\_room;}
+\DoxyCodeLine{149         \textcolor{keywordtype}{int} already\_loaded;}
+\DoxyCodeLine{150         \textcolor{keywordtype}{int} nbr\_lobby = 0;}
+\DoxyCodeLine{151         \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\_GENERIC}} SENDED\_INFO;}
+\DoxyCodeLine{152     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{153     \textcolor{keyword}{private}:}
+\DoxyCodeLine{154         std::vector<std::string> names;}
+\DoxyCodeLine{155         std::vector<int16\_t> max\_players;}
+\DoxyCodeLine{156         std::vector<Room\_client *> Joinable\_rooms;}
+\DoxyCodeLine{157 \};}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !LOBBY\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

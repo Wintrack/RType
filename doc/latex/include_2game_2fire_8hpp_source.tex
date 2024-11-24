@@ -1,0 +1,41 @@
+\hypertarget{include_2game_2fire_8hpp_source}{}\doxysection{fire.\+hpp}
+\label{include_2game_2fire_8hpp_source}\index{include/game/fire.hpp@{include/game/fire.hpp}}
+\mbox{\hyperlink{include_2game_2fire_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{comment}{/*}}
+\DoxyCodeLine{4 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{5 \textcolor{comment}{** B-\/CPP-\/500-\/MAR-\/5-\/1-\/rtype-\/theo.garnier}}
+\DoxyCodeLine{6 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{7 \textcolor{comment}{** fire.hpp}}
+\DoxyCodeLine{8 \textcolor{comment}{*/}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}raylib.h"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{27 \textcolor{keyword}{class }\mbox{\hyperlink{classfire}{fire}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29 \textcolor{keyword}{private}:}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     Texture2D bullet;}
+\DoxyCodeLine{33     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *texture;}
+\DoxyCodeLine{34     Vector2 bulletPos;}
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} bulletActive;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{47     \mbox{\hyperlink{classfire_a3d86fa941b4885cabeb657a58b956b43}{fire}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *texture, Vector2 bulletPos, \textcolor{keywordtype}{bool} bulletActive)}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49         bullet = LoadTexture(texture);}
+\DoxyCodeLine{50         bulletActive = \textcolor{keyword}{true};}
+\DoxyCodeLine{51         bulletPos = (Vector2)\{bulletPos.x , bulletPos.y\};}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{60     \mbox{\hyperlink{classfire_a39c21e95b724c2db74e7da1e2531a937}{\string~fire}}()}
+\DoxyCodeLine{61     \{}
+\DoxyCodeLine{62         bulletActive = \textcolor{keyword}{false};}
+\DoxyCodeLine{63         UnloadTexture(bullet);}
+\DoxyCodeLine{64     \}}
+\DoxyCodeLine{65 \};}
+
+\end{DoxyCode}

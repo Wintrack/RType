@@ -1,0 +1,77 @@
+\hypertarget{_frame_system_8hpp_source}{}\doxysection{Frame\+System.\+hpp}
+\label{_frame_system_8hpp_source}\index{include/game/FrameSystem.hpp@{include/game/FrameSystem.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** r-\/type}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** FrameSysteme}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_macro_8hpp}{game/Macro.hpp}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_entity_8hpp}{Entity.hpp}}"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}raylib.h"{}}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{30 \textcolor{keyword}{class }\mbox{\hyperlink{class_frame_system}{FrameSystem}}}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{42     \mbox{\hyperlink{class_frame_system_a5a078317862b8d3df651a9c3124aa783}{FrameSystem}}(s\_Entity entity) \{}
+\DoxyCodeLine{43         \_entity = entity;}
+\DoxyCodeLine{44         \_pos = \{90, 90\};}
+\DoxyCodeLine{45         \_pos\_bullet = \{32, 10\};}
+\DoxyCodeLine{46         \_frameRec = \{0.0f, 0.0f, (float)\_texture.width/5, (\textcolor{keywordtype}{float})\_texture.height\};}
+\DoxyCodeLine{47     \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{54     \mbox{\hyperlink{class_frame_system_a85c356b326c2bf9bdf0ec7b9abec1d1b}{\string~FrameSystem}}();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_frame_system_a91934a3810537afc06a483369bc2b717}{loadInGameTexture}}()}
+\DoxyCodeLine{62     \{}
+\DoxyCodeLine{63         \textcolor{keywordflow}{switch} (\_entity.id)}
+\DoxyCodeLine{64         \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{66             \_texture = LoadTexture(STARSHIP);}
+\DoxyCodeLine{67             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{68         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{69             \_texture = LoadTexture(BADDUDE);}
+\DoxyCodeLine{70             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{71         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{72             \_texture = LoadTexture(BULLET)}
+\DoxyCodeLine{73             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{74         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{75             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77     \};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_frame_system_a3603beebe0ad6bf064b91c171c3c07fb}{displayFrame}}() \{}
+\DoxyCodeLine{85         \_frameRec.x = (float)\_entity.frame*(\textcolor{keywordtype}{float})\_texture.width/5;}
+\DoxyCodeLine{86         ClearBackground(BLACK);}
+\DoxyCodeLine{87         \textcolor{keywordflow}{if} (\_texture.id == 4)}
+\DoxyCodeLine{88             DrawTextureRec(\_texture, \_frameRecBullet, \_pos, WHITE);}
+\DoxyCodeLine{89         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{90             DrawTextureRec(\_texture, \_frameRec, \_pos, WHITE);}
+\DoxyCodeLine{91     \};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{keyword}{private}:}
+\DoxyCodeLine{94     Texture2D \_texture;}
+\DoxyCodeLine{95     Rectangle \_frameRec;}
+\DoxyCodeLine{96     Rectangle \_frameRecBullet;}
+\DoxyCodeLine{97     s\_Entity \_entity;}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     Vector2 \_pos\_bullet;}
+\DoxyCodeLine{100     Vector2 \_pos;}
+\DoxyCodeLine{101 \};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 \textcolor{comment}{/*}}
+\DoxyCodeLine{104 \textcolor{comment}{1 = player}}
+\DoxyCodeLine{105 \textcolor{comment}{2 = ennemi}}
+\DoxyCodeLine{106 \textcolor{comment}{4 = bullet}}
+\DoxyCodeLine{107 \textcolor{comment}{5 = block}}
+\DoxyCodeLine{108 \textcolor{comment}{*/}}
+
+\end{DoxyCode}

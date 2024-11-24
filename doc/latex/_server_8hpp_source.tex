@@ -1,0 +1,52 @@
+\hypertarget{_server_8hpp_source}{}\doxysection{Server.\+hpp}
+\label{_server_8hpp_source}\index{include/server/Server.hpp@{include/server/Server.hpp}}
+\mbox{\hyperlink{_server_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** B-\/CPP-\/500-\/MAR-\/5-\/1-\/rtype-\/theo.garnier-\/test-\/ecs}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Server}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../game/Lobby.hpp"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_room_8hpp}{Room.hpp}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}serialize.hpp"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <boost/asio.hpp>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{25 \textcolor{keyword}{using }boost::asio::ip::udp;}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifndef SERVER\_HPP\_}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define SERVER\_HPP\_}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{35 \textcolor{keyword}{class }\mbox{\hyperlink{class_server}{Server}} \{}
+\DoxyCodeLine{36     \textcolor{keyword}{public}:}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{48         \mbox{\hyperlink{class_server}{Server}}(boost::asio::io\_context \&io\_context, \textcolor{keywordtype}{short} port);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{56         \mbox{\hyperlink{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}{\string~Server}}();}
+\DoxyCodeLine{57     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_a9b3c864bf08fa970dd6d765266a1eb1c}{do\_receive}}();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{74         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_a5e42bc74289932fc7b2b2228a4fd3b89}{do\_send\_specific}}(udp::endpoint sender\_endpoint);}
+\DoxyCodeLine{83         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_a5390eb0c3cf74e783533cdd3ae14e3f3}{get\_endpoint}}(udp::endpoint sender\_endpoint);}
+\DoxyCodeLine{84         udp::socket socket\_;}
+\DoxyCodeLine{85         udp::endpoint sender\_endpoint\_;}
+\DoxyCodeLine{86         \textcolor{keywordtype}{void} *receive\_buffer;}
+\DoxyCodeLine{87         \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\_GENERIC}} created\_datas;}
+\DoxyCodeLine{88         \mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\_GENERIC}} extracted\_datas;}
+\DoxyCodeLine{89         std::vector<udp::endpoint> \_clients;}
+\DoxyCodeLine{90         \mbox{\hyperlink{classser}{ser}} \_serialize;}
+\DoxyCodeLine{91         int16\_t buffer[600];}
+\DoxyCodeLine{92     \textcolor{keyword}{private}:}
+\DoxyCodeLine{93         \mbox{\hyperlink{class_lobby___serv}{Lobby\_Serv}} lobby;}
+\DoxyCodeLine{94         std::vector<s\_Client> clients\_online;}
+\DoxyCodeLine{95 \};}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !SERVER\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

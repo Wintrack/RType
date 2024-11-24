@@ -1,0 +1,44 @@
+\hypertarget{networking__server_8hpp_source}{}\doxysection{networking\+\_\+server.\+hpp}
+\label{networking__server_8hpp_source}\index{include/server/networking\_server.hpp@{include/server/networking\_server.hpp}}
+\mbox{\hyperlink{networking__server_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** B-\/CPP-\/500-\/MAR-\/5-\/1-\/rtype-\/theo.garnier}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** networking\_server}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}server/serialize.hpp"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../game/Macro.hpp"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{class_u_d_p___server}{UDP\_Server}}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{38     \mbox{\hyperlink{class_u_d_p___server_a7db0c9ef2a5362fa7b5882bc859f2254}{UDP\_Server}}(boost::asio::io\_context \&io\_context, \textcolor{keywordtype}{short} port);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_d_p___server_a39a272ae896910999528a5695c802ed7}{do\_receive}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{55     \textcolor{comment}{// void do\_send();}}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_d_p___server_ad5b47464cb5c89a5491ffef4ef45dae5}{do\_send\_specific}}(udp::endpoint sender\_endpoint);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{keyword}{private}:}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} get\_endpoint(udp::endpoint sender\_endpoint);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     udp::socket socket\_;}
+\DoxyCodeLine{70     udp::endpoint sender\_endpoint\_;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 }
+\DoxyCodeLine{78     \textcolor{keyword}{enum}}
+\DoxyCodeLine{79     \{}
+\DoxyCodeLine{80         max\_length = 1024}
+\DoxyCodeLine{81     \};}
+\DoxyCodeLine{82     \textcolor{keywordtype}{char} data\_[max\_length];}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     std::vector<udp::endpoint> \_clients;}
+\DoxyCodeLine{85     serialize<INSTRUCTION\_GENERIC> \_ser;}
+\DoxyCodeLine{86 \};}
+
+\end{DoxyCode}

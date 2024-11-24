@@ -1,0 +1,113 @@
+\hypertarget{class_lobby___serv}{}\doxysection{Lobby\+\_\+\+Serv Class Reference}
+\label{class_lobby___serv}\index{Lobby\_Serv@{Lobby\_Serv}}
+
+
+class of \mbox{\hyperlink{class_lobby___serv}{Lobby\+\_\+\+Serv}}  
+
+
+
+
+{\ttfamily \#include $<$Lobby.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lobby___serv_a98cb74a11ef2846f2f641f48b7ae4cd6}{Lobby\+\_\+\+Serv}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lobby___serv_a8d36bbf09970738f5c3106d66d5a408e}\label{class_lobby___serv_a8d36bbf09970738f5c3106d66d5a408e}} 
+{\bfseries $\sim$\+Lobby\+\_\+\+Serv} ()
+\begin{DoxyCompactList}\small\item\em Destructor Destructor of class \mbox{\hyperlink{class_lobby___serv}{Lobby\+\_\+\+Serv}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lobby___serv_a7d23a1fa321ba0bb5f1477a9c166cf0d}{add\+\_\+new\+\_\+room}} (std\+::string name, int max\+\_\+players)
+\begin{DoxyCompactList}\small\item\em Make the creation of new room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lobby___serv_abcd3321e3534bd52c7061db3a8a94e98}{join\+\_\+room}} (std\+::string name, \mbox{\hyperlink{structs___client}{s\+\_\+\+Client}} cli)
+\begin{DoxyCompactList}\small\item\em Join the room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lobby___serv_a08ec5453f200ba03ee6bd1ea0e6ee4e3}{destroy\+\_\+room}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Destruction of room. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lobby___serv_ab61482e9274be7f2383bbbad8aec7959}\label{class_lobby___serv_ab61482e9274be7f2383bbbad8aec7959}} 
+std\+::vector$<$ \mbox{\hyperlink{class_room__server}{Room\+\_\+server}} $\ast$ $>$ {\bfseries rooms\+\_\+on\+\_\+list}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class of \mbox{\hyperlink{class_lobby___serv}{Lobby\+\_\+\+Serv}} 
+
+Class that handle the lobby server 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lobby___serv_a98cb74a11ef2846f2f641f48b7ae4cd6}\label{class_lobby___serv_a98cb74a11ef2846f2f641f48b7ae4cd6}} 
+\index{Lobby\_Serv@{Lobby\_Serv}!Lobby\_Serv@{Lobby\_Serv}}
+\index{Lobby\_Serv@{Lobby\_Serv}!Lobby\_Serv@{Lobby\_Serv}}
+\doxysubsubsection{\texorpdfstring{Lobby\_Serv()}{Lobby\_Serv()}}
+{\footnotesize\ttfamily Lobby\+\_\+\+Serv\+::\+Lobby\+\_\+\+Serv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor of class \mbox{\hyperlink{class_lobby___serv}{Lobby\+\_\+\+Serv}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lobby___serv_a7d23a1fa321ba0bb5f1477a9c166cf0d}\label{class_lobby___serv_a7d23a1fa321ba0bb5f1477a9c166cf0d}} 
+\index{Lobby\_Serv@{Lobby\_Serv}!add\_new\_room@{add\_new\_room}}
+\index{add\_new\_room@{add\_new\_room}!Lobby\_Serv@{Lobby\_Serv}}
+\doxysubsubsection{\texorpdfstring{add\_new\_room()}{add\_new\_room()}}
+{\footnotesize\ttfamily void Lobby\+\_\+\+Serv\+::add\+\_\+new\+\_\+room (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{max\+\_\+players }\end{DoxyParamCaption})}
+
+
+
+Make the creation of new room. 
+
+Handle the creation of the new room within the lobby
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \+: name of the new room \\
+\hline
+{\em max\+\_\+players} & max number of player in a room \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lobby___serv_a08ec5453f200ba03ee6bd1ea0e6ee4e3}\label{class_lobby___serv_a08ec5453f200ba03ee6bd1ea0e6ee4e3}} 
+\index{Lobby\_Serv@{Lobby\_Serv}!destroy\_room@{destroy\_room}}
+\index{destroy\_room@{destroy\_room}!Lobby\_Serv@{Lobby\_Serv}}
+\doxysubsubsection{\texorpdfstring{destroy\_room()}{destroy\_room()}}
+{\footnotesize\ttfamily void Lobby\+\_\+\+Serv\+::destroy\+\_\+room (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Destruction of room. 
+
+handle the destruction of a room
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \+: name of the room to destroy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lobby___serv_abcd3321e3534bd52c7061db3a8a94e98}\label{class_lobby___serv_abcd3321e3534bd52c7061db3a8a94e98}} 
+\index{Lobby\_Serv@{Lobby\_Serv}!join\_room@{join\_room}}
+\index{join\_room@{join\_room}!Lobby\_Serv@{Lobby\_Serv}}
+\doxysubsubsection{\texorpdfstring{join\_room()}{join\_room()}}
+{\footnotesize\ttfamily void Lobby\+\_\+\+Serv\+::join\+\_\+room (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{structs___client}{s\+\_\+\+Client}}}]{cli }\end{DoxyParamCaption})}
+
+
+
+Join the room. 
+
+Make it possible to join a room
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \+: name of the room \\
+\hline
+{\em clie} & client that try to join the room \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/game/\mbox{\hyperlink{_lobby_8hpp}{Lobby.\+hpp}}\item 
+src/game/\mbox{\hyperlink{_lobby_8cpp}{Lobby.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,140 @@
+\hypertarget{class_server}{}\doxysection{Server Class Reference}
+\label{class_server}\index{Server@{Server}}
+
+
+classe of \mbox{\hyperlink{class_server}{Server}}  
+
+
+
+
+{\ttfamily \#include $<$Server.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_server_a370f6de26f1e0f7ac542ee575d7560a0}{Server}} (boost\+::asio\+::io\+\_\+context \&io\+\_\+context, short port)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}{$\sim$\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_server_a9b3c864bf08fa970dd6d765266a1eb1c}{do\+\_\+receive}} ()
+\begin{DoxyCompactList}\small\item\em receive data of client \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_a5e42bc74289932fc7b2b2228a4fd3b89}{do\+\_\+send\+\_\+specific}} (udp\+::endpoint sender\+\_\+endpoint)
+\begin{DoxyCompactList}\small\item\em send specifiq data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_a5390eb0c3cf74e783533cdd3ae14e3f3}{get\+\_\+endpoint}} (udp\+::endpoint sender\+\_\+endpoint)
+\begin{DoxyCompactList}\small\item\em get endpoint \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_server_ab710f68f348bddbde185aa3828f77524}\label{class_server_ab710f68f348bddbde185aa3828f77524}} 
+udp\+::socket {\bfseries socket\+\_\+}
+\item 
+\mbox{\Hypertarget{class_server_a6f804ef8e965ff472b920ce6fbf1fdcf}\label{class_server_a6f804ef8e965ff472b920ce6fbf1fdcf}} 
+udp\+::endpoint {\bfseries sender\+\_\+endpoint\+\_\+}
+\item 
+\mbox{\Hypertarget{class_server_a62c2efdbbd4301b286d3a64d1ccb8322}\label{class_server_a62c2efdbbd4301b286d3a64d1ccb8322}} 
+void $\ast$ {\bfseries receive\+\_\+buffer}
+\item 
+\mbox{\Hypertarget{class_server_a339a57e850fc37e14b584f25014c6ed3}\label{class_server_a339a57e850fc37e14b584f25014c6ed3}} 
+\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\+\_\+\+GENERIC}} {\bfseries created\+\_\+datas}
+\item 
+\mbox{\Hypertarget{class_server_ab86371bf40de2388f71e07099946268d}\label{class_server_ab86371bf40de2388f71e07099946268d}} 
+\mbox{\hyperlink{struct_i_n_s_t_r_u_c_t_i_o_n___g_e_n_e_r_i_c}{INSTRUCTION\+\_\+\+GENERIC}} {\bfseries extracted\+\_\+datas}
+\item 
+\mbox{\Hypertarget{class_server_a9e4d719dbd96739f6654117f2cbbc604}\label{class_server_a9e4d719dbd96739f6654117f2cbbc604}} 
+std\+::vector$<$ udp\+::endpoint $>$ {\bfseries \+\_\+clients}
+\item 
+\mbox{\Hypertarget{class_server_ad2030d7858b64ff12d148939d06a68c7}\label{class_server_ad2030d7858b64ff12d148939d06a68c7}} 
+\mbox{\hyperlink{classser}{ser}} {\bfseries \+\_\+serialize}
+\item 
+\mbox{\Hypertarget{class_server_ad0901af087d3c4ab96d73c57655df3f7}\label{class_server_ad0901af087d3c4ab96d73c57655df3f7}} 
+int16\+\_\+t {\bfseries buffer} \mbox{[}600\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+classe of \mbox{\hyperlink{class_server}{Server}} 
+
+class handle \mbox{\hyperlink{class_server}{Server}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_server_a370f6de26f1e0f7ac542ee575d7560a0}\label{class_server_a370f6de26f1e0f7ac542ee575d7560a0}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+context \&}]{io\+\_\+context,  }\item[{short}]{port }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructorr of class \mbox{\hyperlink{class_server}{Server}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+\_\+context} & \+: io\+\_\+context see do boost/asio \\
+\hline
+{\em port} & \+: port to open for connexion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}\label{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}} 
+\index{Server@{Server}!````~Server@{$\sim$Server}}
+\index{````~Server@{$\sim$Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{$\sim$Server()}{~Server()}}
+{\footnotesize\ttfamily Server\+::$\sim$\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Destructor of class \mbox{\hyperlink{class_server}{Server}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_server_a9b3c864bf08fa970dd6d765266a1eb1c}\label{class_server_a9b3c864bf08fa970dd6d765266a1eb1c}} 
+\index{Server@{Server}!do\_receive@{do\_receive}}
+\index{do\_receive@{do\_receive}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{do\_receive()}{do\_receive()}}
+{\footnotesize\ttfamily void Server\+::do\+\_\+receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+receive data of client 
+
+Handle the reception of data send by client \mbox{\Hypertarget{class_server_a5e42bc74289932fc7b2b2228a4fd3b89}\label{class_server_a5e42bc74289932fc7b2b2228a4fd3b89}} 
+\index{Server@{Server}!do\_send\_specific@{do\_send\_specific}}
+\index{do\_send\_specific@{do\_send\_specific}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{do\_send\_specific()}{do\_send\_specific()}}
+{\footnotesize\ttfamily void Server\+::do\+\_\+send\+\_\+specific (\begin{DoxyParamCaption}\item[{udp\+::endpoint}]{sender\+\_\+endpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+send specifiq data 
+
+Send specifiq data to server 
+\begin{DoxyParams}{Parameters}
+{\em sender\+\_\+endpoint} & \+: server endpoint check doc boost/asio \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_a5390eb0c3cf74e783533cdd3ae14e3f3}\label{class_server_a5390eb0c3cf74e783533cdd3ae14e3f3}} 
+\index{Server@{Server}!get\_endpoint@{get\_endpoint}}
+\index{get\_endpoint@{get\_endpoint}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{get\_endpoint()}{get\_endpoint()}}
+{\footnotesize\ttfamily void Server\+::get\+\_\+endpoint (\begin{DoxyParamCaption}\item[{udp\+::endpoint}]{sender\+\_\+endpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+get endpoint 
+
+get endpoint 
+\begin{DoxyParams}{Parameters}
+{\em sender\+\_\+endpoint} & \+: server endpoint check doc boost/asio \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/server/\mbox{\hyperlink{_server_8hpp}{Server.\+hpp}}\item 
+src/server/\mbox{\hyperlink{_server_8cpp}{Server.\+cpp}}\end{DoxyCompactItemize}
